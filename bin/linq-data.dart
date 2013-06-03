@@ -199,9 +199,6 @@ runSamples(String section, Map samplesMap){
 printTOC(String section, Map samplesMap){
   print("\n### $section\n");
   
-  var lib = currentMirrorSystem().findLibrary(const Symbol('linq_samples')).first;
-  samplesMap.forEach((fnName, desc){
-    var fn = lib.functions[new Symbol(fnName)];
-    print("  - ${fnName}: $desc");
-  });
+  samplesMap.forEach((fnName, desc) =>
+    print("  - ${fnName}: $desc"));
 }
