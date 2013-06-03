@@ -8,7 +8,7 @@ Running [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/pl
 executes and displays the results of all the samples. 
 
 
-### [LINQ - Restriction Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-restrictions.dart)
+### [LINQ - Restriction Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-restrictions.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Restriction-Operators-b15d29ca)
 
   - linq1: Where - Simple 1
   - linq2: Where - Simple 2
@@ -16,7 +16,7 @@ executes and displays the results of all the samples.
   - linq4: Where - Drilldown
   - linq5: Where - Indexed
 
-### [LINQ - Projection Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-projections.dart)
+### [LINQ - Projection Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-projections.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-to-DataSets-09787825)
 
   - linq6: Select - Simple 1
   - linq7: Select - Simple 2
@@ -33,7 +33,7 @@ executes and displays the results of all the samples.
   - linq18: SelectMany - Multiple from
   - linq19: SelectMany - Indexed
 
-### [LINQ - Partitioning Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-partitioning.dart)
+### [LINQ - Partitioning Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-partitioning.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Partitioning-Operators-c68aaccc)
 
   - linq20: Take - Simple
   - linq21: Take - Nested
@@ -44,7 +44,7 @@ executes and displays the results of all the samples.
   - linq26: SkipWhile - Simple
   - linq27: SkipWhile - Indexed
 
-### [LINQ - Ordering Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-ordering.dart)
+### [LINQ - Ordering Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-ordering.dart) / [MSDN C#](http://code.msdn.microsoft.com/SQL-Ordering-Operators-050af19e)
 
   - linq28: OrderBy - Simple 1
   - linq29: OrderBy - Simple 2
@@ -59,7 +59,7 @@ executes and displays the results of all the samples.
   - linq38: ThenByDescending - Comparer
   - linq39: Reverse
 
-### [LINQ - Grouping Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-grouping.dart)
+### [LINQ - Grouping Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-grouping.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-to-DataSets-Grouping-c62703ea)
 
   - linq40: GroupBy - Simple 1
   - linq41: GroupBy - Simple 2
@@ -68,7 +68,7 @@ executes and displays the results of all the samples.
   - linq44: GroupBy - Comparer
   - linq45: GroupBy - Comparer, Mapped
 
-### [LINQ - Set Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-setoperations.dart)
+### [LINQ - Set Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-setoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Set-Operators-374f34fe)
 
   - linq46: Distinct - 1
   - linq47: Distinct - 2
@@ -79,14 +79,14 @@ executes and displays the results of all the samples.
   - linq52: Except - 1
   - linq53: Except - 2
 
-### [LINQ - Conversion Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-conversionoperations.dart)
+### [LINQ - Conversion Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-conversionoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Conversion-Operators-e4e59714)
 
   - linq54: ToArray
   - linq55: ToList
   - linq56: ToDictionary
   - linq57: OfType
 
-### [LINQ - Element Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-elementoperations.dart)
+### [LINQ - Element Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-elementoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Element-Operators-0f3f12ce)
 
   - linq58: First - Simple
   - linq59: First - Condition
@@ -96,12 +96,12 @@ executes and displays the results of all the samples.
   - linq63: _(missing from samples)_
   - linq64: ElementAt
 
-### [LINQ - Generation Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-generationoperations.dart)
+### [LINQ - Generation Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-generationoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Generation-Operators-8a3fbff7)
 
   - linq65: Range
   - linq66: Repeat
 
-### [LINQ - Quantifiers](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-quantifiers.dart)
+### [LINQ - Quantifiers](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-quantifiers.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Quantifiers-f00e7e3e)
 
   - linq67: Any - Simple
   - linq68: _(missing from samples)_
@@ -110,7 +110,7 @@ executes and displays the results of all the samples.
   - linq71: _(missing from samples)_
   - linq72: All - Grouped
 
-### [LINQ - Aggregate Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-aggregateoperations.dart)
+### [LINQ - Aggregate Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-aggregateoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Aggregate-Operators-c51b3869)
 
   - linq73: Count - Simple
   - linq74: Count - Conditional
@@ -134,20 +134,20 @@ executes and displays the results of all the samples.
   - linq92: Aggregate - Simple
   - linq93: Aggregate - Seed
 
-### [LINQ - Miscellaneous Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-miscellaneousoperations.dart)
+### [LINQ - Miscellaneous Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-miscellaneousoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Miscellaneous-6b72bb2a)
 
   - linq94: Concat - 1
   - linq95: Concat - 2
   - linq96: EqualAll - 1
   - linq97: EqualAll - 2
 
-### [LINQ - Query Execution](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-queryexecution.dart)
+### [LINQ - Query Execution](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-queryexecution.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Query-Execution-ce0d3b95)
 
   - linq99: Deferred Execution
   - linq100: Immediate Execution
   - linq101: Query Reuse
 
-### [LINQ - Join Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-joinoperators.dart)
+### [LINQ - Join Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-joinoperators.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Join-Operators-dabef4e9)
 
   - linq102: Cross Join
   - linq103: Group Join
