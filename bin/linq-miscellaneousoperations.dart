@@ -7,10 +7,9 @@ doMiscellaneousOperations() =>
      'linq96': 'EqualAll - 1',
      'linq97': 'EqualAll - 2'});
 
-concat(Iterable seq, Iterable withSeq) {
-  seq.toList().addAll(withSeq);
-  return seq;
-}
+concat(Iterable seq, Iterable withSeq) =>
+  seq.toList()..addAll(withSeq);
+
 bool seqEq(Iterable seq, Iterable withSeq) =>    
   seq.length == withSeq.length 
   && range(seq.length).every((i) => seq.elementAt(i) == withSeq.elementAt(i));
