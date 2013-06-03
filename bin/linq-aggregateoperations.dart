@@ -25,13 +25,13 @@ doAggregateOperations() =>
      'linq93': 'Aggregate - Seed'});
 
 sum(Iterable seq, [fn(x)]) =>
-    seq.fold(0, (prev, element) => prev + (fn != null ? fn(element) : element));
+  seq.fold(0, (prev, element) => prev + (fn != null ? fn(element) : element));
 
 min(Iterable seq) =>
-    seq.fold(double.MAX_FINITE, (prev, element) => prev.compareTo(element) > 0 ? element : prev);
+  seq.fold(double.MAX_FINITE, (prev, element) => prev.compareTo(element) > 0 ? element : prev);
 
 max(Iterable seq) =>
-    seq.fold(double.MIN_POSITIVE, (prev, element) => prev.compareTo(element) > 0 ? prev : element);
+  seq.fold(double.MIN_POSITIVE, (prev, element) => prev.compareTo(element) > 0 ? prev : element);
 
 avg(Iterable seq) => sum(seq) / seq.length;
 
@@ -250,7 +250,7 @@ linq88(){
   var products = productsList(); 
   
   var categories = group(products, by:(p) => p.category)
-    .map((g) {
+    .map((g){
       var maxPrice = max(g.values.map((p) => p.unitPrice));
       return { 'Category': g.key, 'MostExpensiveProducts': g.values.where((p) => p.unitPrice == maxPrice) };
     });

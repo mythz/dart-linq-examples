@@ -24,8 +24,7 @@ linq54(){
   var doublesArray = sortedDoubles.toList(growable:false); 
   
   print("Every other double from highest to lowest:"); 
-  for (int d = 0; d < doublesArray.length; d += 2) 
-  { 
+  for (int d = 0; d < doublesArray.length; d += 2){ 
     print(doublesArray[d]); 
   } 
 }

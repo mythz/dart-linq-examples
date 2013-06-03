@@ -75,7 +75,7 @@ linq41(){
   var wordGroups = group(words, by:(w) => w[0])
     .map((g) => { 'FirstLetter': g.key, 'Words': g }); 
       
-  wordGroups.forEach((g) {
+  wordGroups.forEach((g){
     print("Words that start with the letter '${g['FirstLetter']}':"); 
     g['Words'].forEach(print);
   });

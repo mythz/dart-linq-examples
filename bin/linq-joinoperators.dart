@@ -7,15 +7,10 @@ doJoinOperators() =>
      'linq104': 'Cross Join with Group Join',
      'linq105': 'Left Outer Join'});
 
-join(Iterable seq, Iterable withSeq, bool match(x,y)) {
-  var ret = [];
-  seq.forEach((x) => withSeq
-    .forEach((y){
-      if (match(x,y))
-        ret.add([x,y]);
-    }));
-  return ret;
-}
+join(Iterable seq, Iterable withSeq, bool match(x,y)) =>
+  seq.expand((x) => withSeq
+    .where((y) => match(x,y))
+    .map((y) => [x,y]));
 
 joinGroup(Iterable seq, Iterable withSeq, bool match(x,y)) =>
   group(join(seq, withSeq, match), by:(j) => j[0]);  
@@ -93,7 +88,7 @@ linq104(){
       .map((p) => { 'Category': j.key, 'ProductName': p.productName }));
 
   q.forEach((v) => 
-      print("${v['ProductName']}: ${v['Category']}"));
+    print("${v['ProductName']}: ${v['Category']}"));
 }
 /*
 Queso Cabrales: Dairy Products
@@ -126,7 +121,7 @@ linq105(){
     });
 
   q.forEach((v) => 
-      print("${v['ProductName']}: ${v['Category']}"));
+    print("${v['ProductName']}: ${v['Category']}"));
 }
 /*
 Chai: Beverages

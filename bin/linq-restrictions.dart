@@ -44,8 +44,7 @@ Gorgonzola Telino is sold out!
 Perth Pasties is sold out!
 */
 
-linq3(){
-  
+linq3(){  
   List<Product> products = productsList(); 
   
   var expensiveInStockProducts = products

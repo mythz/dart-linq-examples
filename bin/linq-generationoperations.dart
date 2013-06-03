@@ -15,7 +15,7 @@ linq65(){
     .map((n) => { 'Number': n, 'OddEven': n % 2 == 1 ? "odd" : "even" }); 
       
   numbers.forEach((n) =>
-      print("The number ${n['Number']} is ${n['OddEven']}.")); 
+    print("The number ${n['Number']} is ${n['OddEven']}.")); 
 }
 /*
 The number 100 is even.

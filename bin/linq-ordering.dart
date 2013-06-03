@@ -47,7 +47,7 @@ linq29(){
   var words = [ "cherry", "apple", "blueberry" ]; 
   
   var sortedWords = orderBy(words, 
-      (x,y) => x.length.compareTo(y.length));
+    (x,y) => x.length.compareTo(y.length));
   
   print("The sorted list of words (by length):"); 
   sortedWords.forEach(print);
@@ -63,7 +63,7 @@ linq30(){
   var products = productsList(); 
   
   var sortedProducts = orderBy(products, 
-      (p1,p2) => p1.productName.compareTo(p2.productName));
+    (p1,p2) => p1.productName.compareTo(p2.productName));
   
   sortedProducts.forEach(print);
 }
@@ -113,7 +113,7 @@ linq33(){
   var products = productsList(); 
   
   var sortedProducts = orderByDesc(products, 
-      (a,b) => a.unitsInStock.compareTo(b.unitsInStock)); 
+    (a,b) => a.unitsInStock.compareTo(b.unitsInStock)); 
   
   sortedProducts.forEach(print);
 }
@@ -146,8 +146,7 @@ linq35(){
   var digits = [ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" ]; 
   
   var sortedDigits = orderByAll(digits,
-      [(a,b) => a.length.compareTo(b.length),
-       (a,b) => a.compareTo(b)]);
+    [(a,b) => a.length.compareTo(b.length), (a,b) => a.compareTo(b)]);
   
   print("Sorted digits:"); 
   sortedDigits.forEach(print);
@@ -170,8 +169,7 @@ linq36(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
   var sortedWords = orderByAll(words,
-      [(a,b) => a.length.compareTo(b.length),
-       caseInsensitiveComparer]);
+    [(a,b) => a.length.compareTo(b.length), caseInsensitiveComparer]);
   
   sortedWords.forEach(print);
 }
@@ -188,8 +186,7 @@ linq37(){
   var products = productsList(); 
 
   var sortedProducts = orderByAll(products,
-      [(a,b) => a.category.compareTo(b.category),
-       (a,b) => b.unitPrice.compareTo(a.unitPrice)]);
+    [(a,b) => a.category.compareTo(b.category), (a,b) => b.unitPrice.compareTo(a.unitPrice)]);
   
   sortedProducts.forEach(print);
 }
@@ -210,8 +207,7 @@ linq38(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
   var sortedWords = orderByAll(words,
-      [(a,b) => a.length.compareTo(b.length),
-       (a,b) => caseInsensitiveComparer(b, a)]); 
+    [(a,b) => a.length.compareTo(b.length), (a,b) => caseInsensitiveComparer(b, a)]); 
 
   sortedWords.forEach(print);
 }
@@ -228,9 +224,9 @@ linq39(){
   var digits = [ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" ]; 
   
   var reversedIDigits = digits
-      .where((d) => d[1] == 'i')
-      .toList()
-      .reversed; 
+    .where((d) => d[1] == 'i')
+    .toList()
+    .reversed; 
   
   print("A backwards list of the digits with a second character of 'i':");
   reversedIDigits.forEach(print);

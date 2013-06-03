@@ -144,7 +144,7 @@ linq12(){
   
   int index = 0;
   var numsInPlace = numbers
-      .map((num) => { 'Num': num, 'InPlace': (num == index++) }); 
+    .map((num) => { 'Num': num, 'InPlace': (num == index++) }); 
   
   print("Number: In-place?"); 
   numsInPlace.forEach((n) =>

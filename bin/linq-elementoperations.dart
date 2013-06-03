@@ -14,8 +14,8 @@ linq58(){
   var products = productsList(); 
   
   var product12 = products 
-      .where((p) => p.productId == 12)
-      .first; 
+    .where((p) => p.productId == 12)
+    .first; 
   
   print(product12); 
 }
@@ -74,8 +74,8 @@ linq64(){
   var numbers = [ 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 ]; 
   
   int fourthLowNum = numbers 
-      .where((n) => n > 5)
-      .elementAt(1); 
+    .where((n) => n > 5)
+    .elementAt(1); 
   
   print("Second number > 5: $fourthLowNum"); 
 }
