@@ -169,8 +169,6 @@ List<Customer> customersList()
                 double.parse(o['total']))
           ).toList()
       ).toList();
-    
-//    print(_customers);
   }
   return _customers;
 }
@@ -184,21 +182,27 @@ log(o){
   return o;
 }
 
-doAll(List fns){
-  fns.forEach((fn){
-    fn();
-    print("\n");
-  });
-}
-
 runSamples(String section, Map samplesMap){
+//  return printTOC(section, samplesMap);
+  
   var dashes = new String.fromCharCodes(new List.filled(section.length, '-'.codeUnits[0]));
-  print("\n$section\n$dashes\n");
+  print("\n\n$section\n$dashes");
   
   var lib = currentMirrorSystem().findLibrary(const Symbol('linq_samples')).first;
   samplesMap.forEach((fnName, desc){
     var fn = lib.functions[new Symbol(fnName)];
     print("\n\n### ${fnName}: $desc\n");
     lib.invoke(new Symbol(fnName), []);
+  });
+}
+
+printTOC(String section, Map samplesMap){
+  var dashes = new String.fromCharCodes(new List.filled(section.length, '-'.codeUnits[0]));
+  print("\n$section\n$dashes\n");
+  
+  var lib = currentMirrorSystem().findLibrary(const Symbol('linq_samples')).first;
+  samplesMap.forEach((fnName, desc){
+    var fn = lib.functions[new Symbol(fnName)];
+    print("  - ${fnName}: $desc");
   });
 }

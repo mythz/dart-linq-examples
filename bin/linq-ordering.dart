@@ -15,27 +15,18 @@ doOrdering() =>
      'linq38': 'ThenByDescending - Comparer',
      'linq39': 'Reverse'});
 
-orderBy(List it, [Comparator compare]) {
-  it.sort(compare);
-  return it;
-}
+orderBy(List it, [Comparator compare]) =>
+  it..sort(compare);
 
-orderByAll(List it, List<Comparator> comparers) {
-  it.sort((a,b) => comparers
+orderByAll(List it, List<Comparator> comparers) =>
+  it..sort((a,b) => comparers
     .firstWhere((compare) => compare(a,b) != 0, orElse:() => (x,y) => 0)(a,b));
-  return it;
-}
 
-orderByDesc(List it, [Comparator compare]) {
-  if (compare == null)
-    compare = (a,b) => a.compareTo(b);
-  
-  it.sort((a,b) => compare(b,a));
-  return it;
-}
+orderByDesc(List it, [Comparator compare]) =>
+  it..sort((a,b) => compare != null ? compare(b,a) : b.compareTo(a));
 
 caseInsensitiveComparer(a,b) => 
-    a.toUpperCase().compareTo(b.toUpperCase());
+  a.toUpperCase().compareTo(b.toUpperCase());
 
 linq28(){
   var words = [ "cherry", "apple", "blueberry" ]; 
@@ -106,8 +97,7 @@ linq32(){
   
   var sortedDoubles = orderByDesc(doubles); 
   
-  print("The doubles from highest to lowest:"); 
-  
+  print("The doubles from highest to lowest:");   
   sortedDoubles.forEach(print);
 }
 /*
@@ -159,6 +149,7 @@ linq35(){
       [(a,b) => a.length.compareTo(b.length),
        (a,b) => a.compareTo(b)]);
   
+  print("Sorted digits:"); 
   sortedDigits.forEach(print);
 }
 /*

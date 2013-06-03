@@ -30,8 +30,8 @@ linq47(){
   var products = productsList(); 
   
   var categoryNames = products 
-      .map((p) => p.category)
-      .toSet(); 
+    .map((p) => p.category)
+    .toSet(); 
   
   print("Category names:"); 
   categoryNames.forEach(print);
@@ -76,9 +76,9 @@ linq49(){
   var customers = customersList(); 
   
   var productFirstChars = products 
-      .map((p) => p.productName[0]); 
+    .map((p) => p.productName[0]); 
   var customerFirstChars = customers
-      .map((c) => c.companyName[0]); 
+    .map((c) => c.companyName[0]); 
   
   var uniqueFirstChars = productFirstChars.toSet().union(customerFirstChars.toSet()); 
   
@@ -133,9 +133,9 @@ linq51(){
   var customers = customersList(); 
   
   var productFirstChars = products 
-      .map((p) => p.productName[0]); 
+    .map((p) => p.productName[0]); 
   var customerFirstChars = customers
-      .map((c) => c.companyName[0]); 
+    .map((c) => c.companyName[0]); 
   
   var commonFirstChars = productFirstChars.toSet().intersection(customerFirstChars.toSet()); 
   
@@ -188,9 +188,9 @@ linq53(){
   var customers = customersList(); 
   
   var productFirstChars = products 
-      .map((p) => p.productName[0]); 
+    .map((p) => p.productName[0]); 
   var customerFirstChars = customers
-      .map((c) => c.companyName[0]); 
+    .map((c) => c.companyName[0]); 
   
   var productOnlyFirstChars = productFirstChars.toSet().difference(customerFirstChars.toSet()); 
   

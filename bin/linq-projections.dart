@@ -21,7 +21,7 @@ linq6(){
   var numbers = [ 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 ]; 
   
   var numsPlusOne = numbers
-      .map((n) => n + 1); 
+    .map((n) => n + 1); 
   
   print("Numbers + 1:"); 
   numsPlusOne.forEach(print);
@@ -44,7 +44,7 @@ linq7(){
   var products = productsList(); 
   
   var productNames = products
-      .map((p) => p.productName); 
+    .map((p) => p.productName); 
   
   print("Product Names:"); 
   productNames.forEach(print);  
@@ -148,7 +148,7 @@ linq12(){
   
   print("Number: In-place?"); 
   numsInPlace.forEach((n) =>
-      print("${n['Num']}: ${n['InPlace']}"));
+    print("${n['Num']}: ${n['InPlace']}"));
 }
 /*
 Number: In-place?
@@ -169,8 +169,8 @@ linq13(){
   var digits = [ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" ]; 
   
   var lowNums = numbers 
-      .where((n) => n < 5)
-      .map((n) => digits[n]); 
+    .where((n) => n < 5)
+    .map((n) => digits[n]); 
   
   print("Numbers < 5:"); 
   lowNums.forEach(print);   

@@ -28,10 +28,9 @@ linq68(){
 
 linq69(){
   var products = productsList(); 
-  var productGroups = groupBy(products,
-      (p) => p.category)
-      .where((g) => g.values.any((p) => p.unitsInStock == 0))
-      .map((g) => { 'Category': g.key, 'Products': g });
+  var productGroups = groupBy(products, (p) => p.category)
+    .where((g) => g.values.any((p) => p.unitsInStock == 0))
+    .map((g) => { 'Category': g.key, 'Products': g });
 
    productGroups.forEach(print);
 }
@@ -60,8 +59,7 @@ linq71(){
 linq72(){
   var products = productsList(); 
   
-  var productGroups = groupBy(products,
-    (p) => p.category)
+  var productGroups = groupBy(products, (p) => p.category)
     .where((g) => g.values.every((p) => p.unitsInStock > 0))
     .map((g) => { 'Category': g.key, 'Products': g });
       

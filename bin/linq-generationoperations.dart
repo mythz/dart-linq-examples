@@ -7,8 +7,8 @@ doGenerationOperations() =>
 
 List range(int from, [int to]) =>
   to != null 
-  ? new List.generate(to, (x) => x + from)
-  : new List.generate(from, (x) => x);
+    ? new List.generate(to, (x) => x + from)
+    : new List.generate(from, (x) => x);
     
 linq65(){
   var numbers = range(100, 50)

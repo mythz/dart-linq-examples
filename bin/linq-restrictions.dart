@@ -12,7 +12,7 @@ linq1(){
   var numbers = [5, 4, 1, 3, 9, 8, 6, 7, 2, 0]; 
   
   var lowNums = numbers
-      .where((n) => n < 5); 
+    .where((n) => n < 5); 
   
   print("Numbers < 5:"); 
   lowNums.forEach(print);
@@ -30,7 +30,7 @@ linq2() {
   List<Product> products = productsList(); 
   
   var soldOutProducts = products
-      .where((p) => p.unitsInStock == 0);
+    .where((p) => p.unitsInStock == 0);
   
   print("Sold out products:");
   soldOutProducts.forEach((p) => print("${p.productName} is sold out!"));
@@ -49,11 +49,11 @@ linq3(){
   List<Product> products = productsList(); 
   
   var expensiveInStockProducts = products
-      .where((p) => p.unitsInStock > 0 && p.unitPrice > 3.00);
+    .where((p) => p.unitsInStock > 0 && p.unitPrice > 3.00);
       
   print("In-stock products that cost more than 3.00:");
   expensiveInStockProducts.forEach((p) =>
-      print("${p.productName} is in stock and costs more than 3.00."));
+    print("${p.productName} is in stock and costs more than 3.00."));
 } 
 /*
 In-stock products that cost more than 3.00:
