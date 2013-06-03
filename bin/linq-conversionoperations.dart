@@ -19,7 +19,7 @@ ofType(List seq, type) =>
 linq54(){
   var doubles = [ 1.7, 2.3, 1.9, 4.1, 2.9 ]; 
   
-  var sortedDoubles = orderByDesc(doubles);
+  var sortedDoubles = orderDesc(doubles);
 
   var doublesArray = sortedDoubles.toList(growable:false); 
   
@@ -38,7 +38,7 @@ Every other double from highest to lowest:
 linq55(){
   var words = [ "cherry", "apple", "blueberry" ]; 
   
-  var sortedWords = orderBy(words);
+  var sortedWords = order(words);
   
   var wordList = sortedWords.toList(); 
   

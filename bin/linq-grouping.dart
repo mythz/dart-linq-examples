@@ -10,8 +10,8 @@ doGrouping() =>
      'linq45': 'GroupBy - Comparer, Mapped'});
 
 anagramEqualityComparer(a, b) => 
-  new String.fromCharCodes(orderBy(a.codeUnits.toList()))
-  .compareTo(new String.fromCharCodes(orderBy(b.codeUnits.toList())));
+  new String.fromCharCodes(order(a.codeUnits.toList()))
+  .compareTo(new String.fromCharCodes(order(b.codeUnits.toList())));
 
 List<Group> group(Iterable seq, {by(x):null, Comparator matchWith:null, valuesAs(x):null}){
   var ret = [];

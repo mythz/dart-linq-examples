@@ -1019,10 +1019,10 @@ linq20(){
 ```
 #### Output
 
-  First 3 numbers:
-  5
-  4
-  1
+    First 3 numbers:
+    5
+    4
+    1
 
 ### linq21: Take - Nested
 ```csharp
@@ -1328,15 +1328,15 @@ public class CaseInsensitiveComparer : IComparer<string>
 ### Dart utils added
 
 ```dart
-orderBy(List seq, [Comparator compare]) =>
-  seq..sort(compare);
+order(List seq, {Comparator by}) =>
+  seq..sort(by);
 
-orderByAll(List seq, List<Comparator> comparers) =>
-  seq..sort((a,b) => comparers
+orderAll(List seq, {List<Comparator> by}) =>
+  seq..sort((a,b) => by
     .firstWhere((compare) => compare(a,b) != 0, orElse:() => (x,y) => 0)(a,b));
 
-orderByDesc(List seq, [Comparator compare]) =>
-  seq..sort((a,b) => compare != null ? compare(b,a) : b.compareTo(a));
+orderDesc(List seq, {Comparator by}) =>
+  seq..sort((a,b) => by != null ? by(b,a) : b.compareTo(a));
 
 caseInsensitiveComparer(a,b) => 
   a.toUpperCase().compareTo(b.toUpperCase());
@@ -1366,7 +1366,7 @@ public void Linq28()
 linq28(){
   var words = [ "cherry", "apple", "blueberry" ]; 
   
-  var sortedWords = orderBy(words);
+  var sortedWords = order(words);
   
   print("The sorted list of words:"); 
   sortedWords.forEach(print);
@@ -1403,8 +1403,7 @@ public void Linq29()
 linq29(){
   var words = [ "cherry", "apple", "blueberry" ]; 
   
-  var sortedWords = orderBy(words, 
-    (x,y) => x.length.compareTo(y.length));
+  var sortedWords = order(words, by:(a,b) => a.length.compareTo(b.length));
   
   print("The sorted list of words (by length):"); 
   sortedWords.forEach(print);
@@ -1437,8 +1436,7 @@ public void Linq30()
 linq30(){
   var products = productsList(); 
   
-  var sortedProducts = orderBy(products, 
-    (p1,p2) => p1.productName.compareTo(p2.productName));
+  var sortedProducts = order(products, by:(a,b) => a.productName.compareTo(b.productName));
   
   sortedProducts.forEach(print);
 }
@@ -1469,7 +1467,7 @@ public void Linq31()
 linq31(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
-  var sortedWords = orderBy(words, caseInsensitiveComparer); 
+  var sortedWords = order(words, by:caseInsensitiveComparer); 
   
   sortedWords.forEach(print);
 }
@@ -1507,7 +1505,7 @@ public void Linq32()
 linq32(){
   var doubles = [ 1.7, 2.3, 1.9, 4.1, 2.9 ]; 
   
-  var sortedDoubles = orderByDesc(doubles); 
+  var sortedDoubles = orderDesc(doubles); 
   
   print("The doubles from highest to lowest:");   
   sortedDoubles.forEach(print);
@@ -1542,8 +1540,7 @@ public void Linq33()
 linq33(){
   var products = productsList(); 
   
-  var sortedProducts = orderByDesc(products, 
-    (a,b) => a.unitsInStock.compareTo(b.unitsInStock)); 
+  var sortedProducts = orderDesc(products, by:(a,b) => a.unitsInStock.compareTo(b.unitsInStock)); 
   
   sortedProducts.forEach(print);
 }
@@ -1574,7 +1571,7 @@ public void Linq34()
 linq34(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
-  var sortedWords = orderByDesc(words, caseInsensitiveComparer);
+  var sortedWords = orderDesc(words, by:caseInsensitiveComparer);
   
   sortedWords.forEach(print);
 }
@@ -1612,8 +1609,7 @@ public void Linq35()
 linq35(){
   var digits = [ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" ]; 
   
-  var sortedDigits = orderByAll(digits,
-    [(a,b) => a.length.compareTo(b.length), (a,b) => a.compareTo(b)]);
+  var sortedDigits = orderAll(digits, by:[(a,b) => a.length.compareTo(b.length), (a,b) => a.compareTo(b)]);
   
   print("Sorted digits:"); 
   sortedDigits.forEach(print);
@@ -1652,8 +1648,7 @@ public void Linq36()
 linq36(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
-  var sortedWords = orderByAll(words,
-    [(a,b) => a.length.compareTo(b.length), caseInsensitiveComparer]);
+  var sortedWords = orderAll(words, by:[(a,b) => a.length.compareTo(b.length), caseInsensitiveComparer]);
   
   sortedWords.forEach(print);
 }
@@ -1687,8 +1682,8 @@ public void Linq37()
 linq37(){
   var products = productsList(); 
 
-  var sortedProducts = orderByAll(products,
-    [(a,b) => a.category.compareTo(b.category), (a,b) => b.unitPrice.compareTo(a.unitPrice)]);
+  var sortedProducts = orderAll(products,
+    by:[(a,b) => a.category.compareTo(b.category), (a,b) => b.unitPrice.compareTo(a.unitPrice)]);
   
   sortedProducts.forEach(print);
 }
@@ -1725,8 +1720,7 @@ public void Linq38()
 linq38(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
-  var sortedWords = orderByAll(words,
-    [(a,b) => a.length.compareTo(b.length), (a,b) => caseInsensitiveComparer(b, a)]); 
+  var sortedWords = orderAll(words, by:[(a,b) => a.length.compareTo(b.length), (a,b) => caseInsensitiveComparer(b,a)]); 
 
   sortedWords.forEach(print);
 }
