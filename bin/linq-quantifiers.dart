@@ -28,7 +28,7 @@ linq68(){
 
 linq69(){
   var products = productsList(); 
-  var productGroups = groupBy(products, (p) => p.category)
+  var productGroups = group(products, by:(p) => p.category)
     .where((g) => g.values.any((p) => p.unitsInStock == 0))
     .map((g) => { 'Category': g.key, 'Products': g });
 
@@ -59,7 +59,7 @@ linq71(){
 linq72(){
   var products = productsList(); 
   
-  var productGroups = groupBy(products, (p) => p.category)
+  var productGroups = group(products, by:(p) => p.category)
     .where((g) => g.values.every((p) => p.unitsInStock > 0))
     .map((g) => { 'Category': g.key, 'Products': g });
       

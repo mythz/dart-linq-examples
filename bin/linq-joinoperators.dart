@@ -7,18 +7,18 @@ doJoinOperators() =>
      'linq104': 'Cross Join with Group Join',
      'linq105': 'Left Outer Join'});
 
-join(Iterable seq, Iterable withSeq, bool test(x,y)) {
+join(Iterable seq, Iterable withSeq, bool match(x,y)) {
   var ret = [];
   seq.forEach((x) => withSeq
     .forEach((y){
-      if (test(x,y))
+      if (match(x,y))
         ret.add([x,y]);
     }));
   return ret;
 }
 
-joinGroup(Iterable seq, Iterable withSeq, bool test(x,y)) =>
-  groupBy(join(seq, withSeq, test), (j) => j[0]);  
+joinGroup(Iterable seq, Iterable withSeq, bool match(x,y)) =>
+  group(join(seq, withSeq, match), by:(j) => j[0]);  
 
 linq102(){
   var categories = [ "Beverages", "Condiments", "Vegetables", "Dairy Products", "Seafood" ];  

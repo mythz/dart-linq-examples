@@ -85,9 +85,8 @@ linq76(){
 linq77(){
   var products = productsList(); 
   
-  var categoryCounts = groupBy(products,
-      (p) => p.category)
-      .map((g) => { 'Category': g.key, 'ProductCount': g.length });      
+  var categoryCounts = group(products, by:(p) => p.category)
+    .map((g) => { 'Category': g.key, 'ProductCount': g.length });      
 
   categoryCounts.forEach(print);
 }
@@ -127,9 +126,8 @@ There are a total of 20 characters in these words.
 linq80(){
   var products = productsList(); 
   
-  var categories = groupBy(products,
-      (p) => p.category)
-      .map((g) => { 'Category': g.key, 'TotalUnitsInStock': sum(g.values, (p) => p.unitsInStock) }); 
+  var categories = group(products, by:(p) => p.category)
+    .map((g) => { 'Category': g.key, 'TotalUnitsInStock': sum(g.values, (p) => p.unitsInStock) }); 
       
   categories.forEach(print);
 }
@@ -169,8 +167,7 @@ The shortest word is 5 characters long.
 linq83(){
   var products = productsList(); 
   
-  var categories = groupBy(products,
-    (p) => p.category)
+  var categories = group(products, by:(p) => p.category)
     .map((g) => { 'Category': g.key, 'CheapestPrice': min(g.values.map((p) => p.unitPrice)) });
 
   categories.forEach(print);
@@ -189,12 +186,11 @@ linq83(){
 linq84(){
   var products = productsList(); 
   
-  var categories = groupBy(products,
-      (p) => p.category)
-      .map((g) {
-        var minPrice = min(g.values.map((p) => p.unitPrice));
-        return { 'Category': g.key, 'CheapestProducts': g.values.where((p) => p.unitPrice == minPrice) };
-      });
+  var categories = group(products, by:(p) => p.category)
+    .map((g) {
+      var minPrice = min(g.values.map((p) => p.unitPrice));
+      return { 'Category': g.key, 'CheapestProducts': g.values.where((p) => p.unitPrice == minPrice) };
+    });
 
   categories.forEach(print);
 }
@@ -234,8 +230,7 @@ The longest word is 9 characters long.
 linq87(){
   var products = productsList(); 
   
-  var categories = groupBy(products,
-    (p) => p.category)
+  var categories = group(products, by:(p) => p.category)
     .map((g) => { 'Category': g.key, 'MostExpensivePrice': max(g.values.map((p) => p.unitPrice)) });      
 
   categories.forEach(print);
@@ -254,8 +249,7 @@ linq87(){
 linq88(){
   var products = productsList(); 
   
-  var categories = groupBy(products,
-    (p) => p.category)
+  var categories = group(products, by:(p) => p.category)
     .map((g) {
       var maxPrice = max(g.values.map((p) => p.unitPrice));
       return { 'Category': g.key, 'MostExpensiveProducts': g.values.where((p) => p.unitPrice == maxPrice) };
@@ -299,9 +293,8 @@ The average word length is 6.666666666666667 characters.
 linq91(){
   var products = productsList(); 
   
-  var categories = groupBy(products,
-      (p) => p.category)
-      .map((g) => { 'Category': g.key, 'AveragePrice': avg(g.values.map((p) => p.unitPrice)) });
+  var categories = group(products, by:(p) => p.category)
+    .map((g) => { 'Category': g.key, 'AveragePrice': avg(g.values.map((p) => p.unitPrice)) });
 
   categories.forEach(print);
 }

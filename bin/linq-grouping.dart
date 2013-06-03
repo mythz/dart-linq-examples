@@ -9,20 +9,20 @@ doGrouping() =>
      'linq44': 'GroupBy - Comparer',
      'linq45': 'GroupBy - Comparer, Mapped'});
 
-List<Group> groupBy(Iterable seq, fn(x), [Comparator comparer=null, mapValues(x)=null]){
+List<Group> group(Iterable seq, {by(x):null, Comparator matchWith:null, valuesAs(x):null}){
   var ret = [];
   var map = new Map<dynamic, Group>();
   seq.forEach((x){
-    var val = fn(x);
-    var key = comparer != null
-        ? map.keys.firstWhere((k) => comparer(val, k) == 0, orElse:() => val)
-        : val;
+    var val = by(x);
+    var key = matchWith != null
+      ? map.keys.firstWhere((k) => matchWith(val, k) == 0, orElse:() => val)
+      : val;
     
     if (!map.containsKey(key))
       map[key] = new Group(val);
     
-    if (mapValues != null)
-      x = mapValues(x);
+    if (valuesAs != null)
+      x = valuesAs(x);
     
     map[key].add(x);
   });
@@ -43,7 +43,7 @@ class Group extends IterableBase {
 linq40(){
   var numbers = [ 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 ]; 
   
-  var numberGroups = groupBy(numbers, (n) => n % 5)
+  var numberGroups = group(numbers, by:(n) => n % 5)
     .map((g) => {'Remainder':g.key, 'Numbers':g});
       
   numberGroups.forEach((g){
@@ -72,7 +72,7 @@ Numbers with a remainder of 4 when divided by 5:
 linq41(){
   var words = [ "blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese" ]; 
   
-  var wordGroups = groupBy(words, (w) => w[0])
+  var wordGroups = group(words, by:(w) => w[0])
     .map((g) => { 'FirstLetter': g.key, 'Words': g }); 
       
   wordGroups.forEach((g) {
@@ -95,8 +95,8 @@ banana
 linq42(){
   var products = productsList(); 
   
-  var orderGroups = groupBy(products, (p) => p.category)
-      .map((g) => { 'Category': g.key, 'Products': g });
+  var orderGroups = group(products, by:(p) => p.category)
+    .map((g) => { 'Category': g.key, 'Products': g });
  
   orderGroups.forEach(print);
 }
@@ -111,12 +111,11 @@ linq43(){
   var customerOrderGroups = customers
       .map((c) => {
         'CompanyName': c.companyName, 
-        'YearGroups': groupBy(c.orders, (o) => o.orderDate.year)
+        'YearGroups': group(c.orders, by:(o) => o.orderDate.year)
           .map((yg) => {
             'Year': yg.key, 
-            'MonthGroups': groupBy(yg, 
-                (o) => o.orderDate.month)
-                .map((mg) => { 'Month': mg.key, 'Orders': mg }) 
+            'MonthGroups': group(yg, by:(o) => o.orderDate.month)
+              .map((mg) => { 'Month': mg.key, 'Orders': mg }) 
           })
       });
 
@@ -128,13 +127,13 @@ linq43(){
 */
 
 anagramEqualityComparer(a, b) => 
-    new String.fromCharCodes(orderBy(a.codeUnits.toList()))
-    .compareTo(new String.fromCharCodes(orderBy(b.codeUnits.toList())));
+  new String.fromCharCodes(orderBy(a.codeUnits.toList()))
+  .compareTo(new String.fromCharCodes(orderBy(b.codeUnits.toList())));
 
 linq44(){
   var anagrams = [ "from   ", " salt", " earn ", "  last   ", " near ", " form  " ]; 
   
-  var orderGroups = groupBy(anagrams, (w) => w.trim(), anagramEqualityComparer); 
+  var orderGroups = group(anagrams, by:(w) => w.trim(), matchWith:anagramEqualityComparer); 
   
   orderGroups.forEach((x) => print(x.values)); 
 }
@@ -147,10 +146,10 @@ linq44(){
 linq45(){
   var anagrams = [ "from   ", " salt", " earn ", "  last   ", " near ", " form  " ]; 
   
-  var orderGroups = groupBy(anagrams, 
-    (w) => w.trim(), 
-    anagramEqualityComparer, 
-    (w) => w.toUpperCase()); 
+  var orderGroups = group(anagrams, 
+    by: (w) => w.trim(), 
+    matchWith: anagramEqualityComparer, 
+    valuesAs: (w) => w.toUpperCase()); 
   
   orderGroups.forEach((x) => print(x.values)); 
 }
