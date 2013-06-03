@@ -15,15 +15,15 @@ doOrdering() =>
      'linq38': 'ThenByDescending - Comparer',
      'linq39': 'Reverse'});
 
-orderBy(List it, [Comparator compare]) =>
-  it..sort(compare);
+orderBy(List seq, [Comparator compare]) =>
+  seq..sort(compare);
 
-orderByAll(List it, List<Comparator> comparers) =>
-  it..sort((a,b) => comparers
+orderByAll(List seq, List<Comparator> comparers) =>
+  seq..sort((a,b) => comparers
     .firstWhere((compare) => compare(a,b) != 0, orElse:() => (x,y) => 0)(a,b));
 
-orderByDesc(List it, [Comparator compare]) =>
-  it..sort((a,b) => compare != null ? compare(b,a) : b.compareTo(a));
+orderByDesc(List seq, [Comparator compare]) =>
+  seq..sort((a,b) => compare != null ? compare(b,a) : b.compareTo(a));
 
 caseInsensitiveComparer(a,b) => 
   a.toUpperCase().compareTo(b.toUpperCase());
