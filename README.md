@@ -1,7 +1,7 @@
 101 LINQ Samples in Dart
 ========================
 
-Port of the [C# 101 LINQ Samples](http://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b) rewritten into idiomatic Dart using the built-in functinal collection mixins.  
+Port of the [C# 101 LINQ Samples](http://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b) rewritten into idiomatic Dart and utilizing its functional collection mixins.
 
 Running [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/play.dart) executes and displays the results of all samples.
 
@@ -154,13 +154,13 @@ The samples below mirrors the C# LINQ samples layout with the names of the top-l
   - linq105: Left Outer Join
 
 
-##  Side-by-side - C# LINQ vs Dart collections
+##  Side-by-side - C# LINQ vs Dart functional collections
 
-For a side-by-side comparison, the **C#** source code is displayed above the equivalent **Dart** translation. 
+For a side-by-side comparison, the original **C#** source code is displayed above the equivalent **Dart** translation. 
 
   - The **Output** shows the console output of running the **Dart** sample. 
-  - Outputs ending with `...` illustrate that only a partial response is displayed. 
-  - The source-code for C# and Dart utils used are included once under the section they're used in.
+  - Outputs ending with `...` illustrates only a partial response is displayed. 
+  - The source-code for C# and Dart utils used are included once under the first section they're used in.
   - The C# ObjectDumper util used is downloadable from MSDN - [ObjectDumper.zip](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba/file/46086/1/ObjectDumper.zip)
 
 You can see the full output of all the samples by running [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/play.dart) locally.
