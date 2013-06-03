@@ -201,7 +201,8 @@ linq37(){
 linq38(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
-  var sortedWords = orderAll(words, by:[(a,b) => a.length.compareTo(b.length), (a,b) => caseInsensitiveComparer(b, a)]); 
+  var sortedWords = orderAll(words, 
+    by:[(a,b) => a.length.compareTo(b.length), (a,b) => caseInsensitiveComparer(b,a)]); 
 
   sortedWords.forEach(print);
 }

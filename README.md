@@ -1720,7 +1720,8 @@ public void Linq38()
 linq38(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
-  var sortedWords = orderAll(words, by:[(a,b) => a.length.compareTo(b.length), (a,b) => caseInsensitiveComparer(b,a)]); 
+  var sortedWords = orderAll(words, 
+    by:[(a,b) => a.length.compareTo(b.length), (a,b) => caseInsensitiveComparer(b,a)]); 
 
   sortedWords.forEach(print);
 }
@@ -3980,7 +3981,6 @@ joinGroup(Iterable seq, Iterable withSeq, bool match(x,y)) =>
 //c#
 public void Linq102() 
 { 
-  
     string[] categories = new string[]{  
         "Beverages",   
         "Condiments",   
@@ -4113,8 +4113,6 @@ public void Linq104()
   
     List<Product> products = GetProductList(); 
   
-  
-  
     var q = 
         from c in categories 
         join p in products on c equals p.Category into ps 
@@ -4172,8 +4170,6 @@ public void Linq105()
         "Seafood" }; 
   
     List<Product> products = GetProductList(); 
-  
-  
   
     var q = 
         from c in categories 
