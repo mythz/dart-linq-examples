@@ -1,18 +1,19 @@
 part of linq_samples;
 
 doOrdering() =>
-  doAll([linq28, 
-         linq29,
-         linq30,
-         linq31,
-         linq32,
-         linq33,
-         linq34,
-         linq35,
-         linq36,
-         linq37,
-         linq38,
-         linq39]);
+  runSamples("LINQ - Ordering Operators",
+    {'linq28': 'OrderBy - Simple 1', 
+     'linq29': 'OrderBy - Simple 2',
+     'linq30': 'OrderBy - Simple 3',
+     'linq31': 'OrderBy - Comparer',
+     'linq32': 'OrderByDescending - Simple 1',
+     'linq33': 'OrderByDescending - Simple 2',
+     'linq34': 'OrderByDescending - Comparer',
+     'linq35': 'ThenBy - Simple',
+      'linq36': 'ThenBy - Comparer',
+     'linq37': 'ThenByDescending - Simple',
+     'linq38': 'ThenByDescending - Comparer',
+     'linq39': 'Reverse'});
 
 orderBy(List it, [Comparator compare]) {
   it.sort(compare);

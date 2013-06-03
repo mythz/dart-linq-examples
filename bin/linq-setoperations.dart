@@ -1,14 +1,15 @@
 part of linq_samples;
 
 doSetOperations() =>
-  doAll([linq46, 
-         linq47,
-         linq48,
-         linq49,
-         linq50,
-         linq51,
-         linq52,
-         linq53]);
+  runSamples("LINQ - Set Operators", 
+    {'linq46': 'Distinct - 1', 
+     'linq47': 'Distinct - 2',
+     'linq48': 'Union - 1',
+     'linq49': 'Union - 2',
+     'linq50': 'Intersect - 1',
+     'linq51': 'Intersect - 2',
+     'linq52': 'Except - 1',
+     'linq53': 'Except - 2'});
 
 linq46(){
   var factorsOf300 = [ 2, 2, 3, 5, 5 ]; 

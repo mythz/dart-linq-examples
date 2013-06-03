@@ -1,13 +1,14 @@
 part of linq_samples;
 
 doElementOperations() =>
-  doAll([linq58, 
-         linq59,
-         linq60,
-         linq61,
-         linq62,
-         linq63,
-         linq64]);
+  runSamples("LINQ - Element Operators",
+    {'linq58': 'First - Simple', 
+     'linq59': 'First - Condition',
+     'linq60': '_(missing from samples)_',
+     'linq61': 'FirstOrDefault - Simple',
+     'linq62': 'FirstOrDefault - Condition',
+     'linq63': '_(missing from samples)_',
+     'linq64': 'ElementAt'});
 
 linq58(){
   var products = productsList(); 

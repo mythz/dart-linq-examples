@@ -1,14 +1,15 @@
 part of linq_samples;
 
 doPartitioning() =>
-  doAll([linq20, 
-         linq21,
-         linq22,
-         linq23,
-         linq24,
-         linq25,
-         linq26,
-         linq27]);
+  runSamples("LINQ - Partitioning Operators",
+    {'linq20': 'Take - Simple', 
+     'linq21': 'Take - Nested',
+     'linq22': 'Skip - Simple',
+     'linq23': 'Skip - Nested',
+     'linq24': 'TakeWhile - Simple',
+     'linq25': 'TakeWhile - Indexed',
+     'linq26': 'SkipWhile - Simple',
+     'linq27': 'SkipWhile - Indexed'});
 
 linq20(){
   var numbers = [ 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 ]; 

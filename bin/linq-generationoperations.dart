@@ -1,8 +1,9 @@
 part of linq_samples;
 
 doGenerationOperations() =>
-  doAll([linq65, 
-         linq66]);
+  runSamples("LINQ - Generation Operators", 
+    {'linq65': 'Range', 
+     'linq66': 'Repeat'});
 
 List range(int from, [int to]) =>
   to != null 

@@ -1,14 +1,15 @@
 part of linq_samples;
 
 doJoinOperators() =>
-  doAll([linq102,
-         linq103,
-         linq104,
-         linq105]);
+  runSamples("LINQ - Join Operators",
+    {'linq102': 'Cross Join',
+     'linq103': 'Group Join',
+     'linq104': 'Cross Join with Group Join',
+     'linq105': 'Left Outer Join'});
 
-join(Iterable it, Iterable withIt, bool test(x,y)) {
+join(Iterable seq, Iterable withSeq, bool test(x,y)) {
   var ret = [];
-  it.forEach((x) => withIt
+  seq.forEach((x) => withSeq
     .forEach((y){
       if (test(x,y))
         ret.add([x,y]);
@@ -16,11 +17,11 @@ join(Iterable it, Iterable withIt, bool test(x,y)) {
   return ret;
 }
 
-joinGroup(Iterable it, Iterable withIt, bool test(x,y)) =>
-  groupBy(join(it, withIt, test), (j) => j[0]);  
+joinGroup(Iterable seq, Iterable withSeq, bool test(x,y)) =>
+  groupBy(join(seq, withSeq, test), (j) => j[0]);  
 
 linq102(){
-  var categories = [ "Beverages", "Condiments", "Vegetables", "Dairy Products", "Seafood"];  
+  var categories = [ "Beverages", "Condiments", "Vegetables", "Dairy Products", "Seafood" ];  
   
   var products = productsList(); 
   

@@ -1,9 +1,10 @@
 part of linq_samples;
 
 doQueryExecution() =>
-  doAll([linq99,
-         linq100,
-         linq101]);
+  runSamples("LINQ - Query Execution",
+    {'linq99': 'Deferred Execution',
+     'linq100': 'Immediate Execution',
+     'linq101': 'Query Reuse'});
 
 linq99(){
   var numbers = [ 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 ]; 

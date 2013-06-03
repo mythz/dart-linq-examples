@@ -1,12 +1,13 @@
 part of linq_samples;
 
 doQuantifiers() =>
-  doAll([linq67,
-         linq68,
-         linq69,
-         linq70,
-         linq71,
-         linq72]);
+  runSamples("LINQ - Quantifiers",
+    {'linq67': 'Any - Simple',
+     'linq68': '_(missing from samples)_',
+     'linq69': 'Any - Grouped',
+     'linq70': 'All - Simple',
+     'linq71': '_(missing from samples)_',
+     'linq72': 'All - Grouped'});
     
 linq67(){
   var words = [ "believe", "relief", "receipt", "field" ]; 
@@ -21,10 +22,8 @@ There is a word that contains in the list that contains 'ei': true
 
 //Missing
 linq68(){
-
 }
 /*
-
 */
 
 linq69(){
@@ -52,12 +51,10 @@ linq70(){
 The list contains only odd numbers: true
 */
 
-//Missing?
+//Missing
 linq71(){
-
 }
 /*
-
 */
 
 linq72(){

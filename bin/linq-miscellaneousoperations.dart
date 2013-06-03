@@ -1,18 +1,19 @@
 part of linq_samples;
 
 doMiscellaneousOperations() =>
-  doAll([linq94,
-         linq95,
-         linq96,
-         linq97]);
+  runSamples("LINQ - Miscellaneous Operators",
+    {'linq94': 'Concat - 1',
+     'linq95': 'Concat - 2',
+     'linq96': 'EqualAll - 1',
+     'linq97': 'EqualAll - 2'});
 
-concat(Iterable it, Iterable withIt) {
-  it.toList().addAll(withIt);
-  return it;
+concat(Iterable seq, Iterable withSeq) {
+  seq.toList().addAll(withSeq);
+  return seq;
 }
-bool seqEq(Iterable it, Iterable withIt) =>    
-  it.length == withIt.length 
-  && range(it.length).every((i) => it.elementAt(i) == withIt.elementAt(i));
+bool seqEq(Iterable seq, Iterable withSeq) =>    
+  seq.length == withSeq.length 
+  && range(seq.length).every((i) => seq.elementAt(i) == withSeq.elementAt(i));
 
 linq94(){
   var numbersA = [ 0, 2, 4, 5, 6, 8, 9 ]; 
@@ -57,9 +58,9 @@ linq95(){
 Customer and product names:
 Alfreds Futterkiste
 Ana Trujillo Emparedados y helados
-Antonio Moreno Taquer�a
+Antonio Moreno Taquería
 Around the Horn
-Berglunds snabbk�p
+Berglunds snabbköp
 Blauer See Delikatessen
 ...
 */

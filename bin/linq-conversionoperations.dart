@@ -1,27 +1,27 @@
 part of linq_samples;
 
 doConversionOperations() =>
-  doAll([linq54, 
-         linq55,
-         linq56,
-         linq57]);
+  runSamples("LINQ - Conversion Operators",
+    {'linq54': 'ToArray',  //Dart has fixed-size Lists instead
+     'linq55': 'ToList',
+     'linq56': 'ToDictionary',
+     'linq57': 'OfType'});
 
-toMap(List it, f(x)) {
+toMap(List seq, f(x)) {
   var map = {};
-  it.forEach((x) => map[f(x)] = x);
+  seq.forEach((x) => map[f(x)] = x);
   return map;
 }
 
-ofType(List it, type) {
-  return it.where((x) => reflect(x).type.qualifiedName == reflectClass(type).qualifiedName);
-}
+ofType(List seq, type) =>
+  seq.where((x) => reflect(x).type.qualifiedName == reflectClass(type).qualifiedName);
   
 linq54(){
   var doubles = [ 1.7, 2.3, 1.9, 4.1, 2.9 ]; 
   
   var sortedDoubles = orderByDesc(doubles);
 
-  var doublesArray = sortedDoubles; 
+  var doublesArray = sortedDoubles.toList(growable:false); 
   
   print("Every other double from highest to lowest:"); 
   for (int d = 0; d < doublesArray.length; d += 2) 
@@ -41,7 +41,7 @@ linq55(){
   
   var sortedWords = orderBy(words);
   
-  var wordList = sortedWords; 
+  var wordList = sortedWords.toList(); 
   
   print("The sorted word list:"); 
   wordList.forEach(print);

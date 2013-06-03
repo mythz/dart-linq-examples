@@ -2,6 +2,7 @@ library linq_data;
 
 import 'dart:io';
 import 'dart:json' as JSON;
+import 'dart:mirrors';
 
 class Product {
   final int productId;
@@ -142,7 +143,6 @@ List<Product> productsList() {
 }
 
 List<Customer> _customers;
-
 List<Customer> customersList()
 {
   if (_customers == null)
@@ -191,3 +191,14 @@ doAll(List fns){
   });
 }
 
+runSamples(String section, Map samplesMap){
+  var dashes = new String.fromCharCodes(new List.filled(section.length, '-'.codeUnits[0]));
+  print("\n$section\n$dashes\n");
+  
+  var lib = currentMirrorSystem().findLibrary(const Symbol('linq_samples')).first;
+  samplesMap.forEach((fnName, desc){
+    var fn = lib.functions[new Symbol(fnName)];
+    print("\n\n### ${fnName}: $desc\n");
+    lib.invoke(new Symbol(fnName), []);
+  });
+}

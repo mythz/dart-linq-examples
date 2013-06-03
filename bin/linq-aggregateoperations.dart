@@ -1,38 +1,39 @@
 part of linq_samples;
 
 doAggregateOperations() =>
-  doAll([linq73,
-         linq74,
-         linq75,
-         linq76,
-         linq77,
-         linq78,
-         linq79,
-         linq80,
-         linq81,
-         linq82,
-         linq83,
-         linq84,
-         linq85,
-         linq86,
-         linq87,
-         linq88,
-         linq89,
-         linq90,
-         linq91,
-         linq92,
-         linq93]);
+  runSamples("LINQ - Aggregate Operators",
+    {'linq73': 'Count - Simple',
+     'linq74': 'Count - Conditional',
+     'linq75': '_(missing from samples)_',
+     'linq76': 'Count - Nested',
+     'linq77': 'Count - Grouped',
+     'linq78': 'Sum - Simple',
+     'linq79': 'Sum - Projection',
+     'linq80': 'Sum - Grouped',
+     'linq81': 'Min - Simple',
+     'linq82': 'Min - Projection',
+     'linq83': 'Min - Grouped',
+     'linq84': 'Min - Elements',
+     'linq85': 'Max - Simple',
+     'linq86': 'Max - Projection',
+     'linq87': 'Max - Grouped',
+     'linq88': 'Max - Elements',
+     'linq89': 'Average - Simple',
+     'linq90': 'Average - Projection',
+     'linq91': 'Average - Grouped',
+     'linq92': 'Aggregate - Simple',
+     'linq93': 'Aggregate - Seed'});
 
-sum(Iterable it, [fn(x)]) =>
-    it.fold(0, (prev, element) => prev + (fn != null ? fn(element) : element));
+sum(Iterable seq, [fn(x)]) =>
+    seq.fold(0, (prev, element) => prev + (fn != null ? fn(element) : element));
 
-min(Iterable it) =>
-    it.fold(double.MAX_FINITE, (prev, element) => prev.compareTo(element) > 0 ? element : prev);
+min(Iterable seq) =>
+    seq.fold(double.MAX_FINITE, (prev, element) => prev.compareTo(element) > 0 ? element : prev);
 
-max(Iterable it) =>
-    it.fold(double.MIN_POSITIVE, (prev, element) => prev.compareTo(element) > 0 ? prev : element);
+max(Iterable seq) =>
+    seq.fold(double.MIN_POSITIVE, (prev, element) => prev.compareTo(element) > 0 ? prev : element);
 
-avg(Iterable it) => sum(it) / it.length;
+avg(Iterable seq) => sum(seq) / seq.length;
 
 linq73(){
   var factorsOf300 = [ 2, 2, 3, 5, 5 ]; 
@@ -42,7 +43,7 @@ linq73(){
   print("There are $uniqueFactors unique factors of 300."); 
 }
 /*
-
+There are 3 unique factors of 300.
 */
 
 linq74(){

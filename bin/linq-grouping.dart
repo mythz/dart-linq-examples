@@ -1,17 +1,18 @@
 part of linq_samples;
 
 doGrouping() =>
-  doAll([linq40, 
-         linq41,
-         linq42,
-         linq43,
-         linq44,
-         linq45]);
+  runSamples("LINQ - Grouping Operators",
+    {'linq40': 'GroupBy - Simple 1', 
+     'linq41': 'GroupBy - Simple 2',
+     'linq42': 'GroupBy - Simple 3',
+     'linq43': 'GroupBy - Nested',
+     'linq44': 'GroupBy - Comparer',
+     'linq45': 'GroupBy - Comparer, Mapped'});
 
-List<Group> groupBy(Iterable it, dynamic fn(x), [Comparator comparer=null, mapValues(x)=null]) {
+List<Group> groupBy(Iterable seq, dynamic fn(x), [Comparator comparer=null, mapValues(x)=null]) {
   var ret = [];
   var map = new Map<dynamic, Group>();
-  it.forEach((x){
+  seq.forEach((x){
     var val = fn(x);
     var key = comparer != null
         ? map.keys.firstWhere((k) => comparer(val, k) == 0, orElse:() => val)

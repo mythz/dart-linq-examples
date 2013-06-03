@@ -1,20 +1,21 @@
 part of linq_samples;
 
 doProjections() =>
-  doAll([linq6, 
-         linq7,
-         linq8,
-         linq9,
-         linq10,
-         linq11,
-         linq12,
-         linq13,
-         linq14,
-         linq15,
-         linq16,
-         linq17,
-         linq18,
-         linq19]);
+  runSamples("LINQ - Projection Operators",
+    {'linq6':  'Select - Simple 1', 
+     'linq7':  'Select - Simple 2',
+     'linq8':  'Select - Transformation',
+     'linq9':  'Select - Anonymous Types 1',
+     'linq10': 'Select - Anonymous Types 2',
+     'linq11': 'Select - Anonymous Types 3',
+     'linq12': 'Select - Indexed',
+     'linq13': 'Select - Filtered',
+     'linq14': 'SelectMany - Compound from 1',
+     'linq15': 'SelectMany - Compound from 2',
+     'linq16': 'SelectMany - Compound from 3',
+     'linq17': 'SelectMany - from Assignment',
+     'linq18': 'SelectMany - Multiple from',
+     'linq19': 'SelectMany - Indexed'});
 
 linq6(){
   var numbers = [ 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 ]; 

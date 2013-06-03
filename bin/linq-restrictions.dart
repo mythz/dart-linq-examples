@@ -1,11 +1,12 @@
 part of linq_samples;
 
 doRestrictions() =>
-  doAll([linq1, 
-         linq2,
-         linq3,
-         linq4,
-         linq5]);
+  runSamples("LINQ - Restriction Operators", 
+    {'linq1': 'Where - Simple 1', 
+     'linq2': 'Where - Simple 2',
+     'linq3': 'Where - Simple 3',
+     'linq4': 'Where - Drilldown',
+     'linq5': 'Where - Indexed'});
 
 linq1(){
   var numbers = [5, 4, 1, 3, 9, 8, 6, 7, 2, 0]; 
