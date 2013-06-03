@@ -10,7 +10,7 @@ doOrdering() =>
      'linq33': 'OrderByDescending - Simple 2',
      'linq34': 'OrderByDescending - Comparer',
      'linq35': 'ThenBy - Simple',
-      'linq36': 'ThenBy - Comparer',
+     'linq36': 'ThenBy - Comparer',
      'linq37': 'ThenByDescending - Simple',
      'linq38': 'ThenByDescending - Comparer',
      'linq39': 'Reverse'});

@@ -9,6 +9,10 @@ doGrouping() =>
      'linq44': 'GroupBy - Comparer',
      'linq45': 'GroupBy - Comparer, Mapped'});
 
+anagramEqualityComparer(a, b) => 
+  new String.fromCharCodes(orderBy(a.codeUnits.toList()))
+  .compareTo(new String.fromCharCodes(orderBy(b.codeUnits.toList())));
+
 List<Group> group(Iterable seq, {by(x):null, Comparator matchWith:null, valuesAs(x):null}){
   var ret = [];
   var map = new Map<dynamic, Group>();
@@ -125,10 +129,6 @@ linq43(){
 {CompanyName: Alfreds Futterkiste, YearGroups: {{Year: 1997, MonthGroups: {{Month: 8, Orders: {{orderId: 10643, orderDate: 1997-08-25 00:00:00.000, total: 814.5}}}, {Month: 10, Orders: {{orderId: 10692, orderDate: 1997-10-03 00:00:00.000, total: 878.0}, {orderId: 10702, orderDate: 1997-10-13 00:00:00.000, total: 330.0}}}}}, {Year: 1998, MonthGroups: {{Month: 1, Orders: {{orderId: 10835, orderDate: 1998-01-15 00:00:00.000, total: 845.8}}}, {Month: 3, Orders: {{orderId: 10952, orderDate: 1998-03-16 00:00:00.000, total: 471.2}}}, {Month: 4, Orders: {{orderId: 11011, orderDate: 1998-04-09 00:00:00.000, total: 933.5}}}}}}}
 {CompanyName: Ana Trujillo Emparedados y helados, YearGroups: {{Year: 1996, MonthGroups: {{Month: 9, Orders: {{orderId: 10308, orderDate: 1996-09-18 00:00:00.000, total: 88.8}}}}}, {Year: 1997, MonthGroups: {{Month: 8, Orders: {{orderId: 10625, orderDate: 1997-08-08 00:00:00.000, total: 479.75}}}, {Month: 11, Orders: {{orderId: 10759, orderDate: 1997-11-28 00:00:00.000, total: 320.0}}}}}, {Year: 1998, MonthGroups: {{Month: 3, Orders: {{orderId: 10926, orderDate: 1998-03-04 00:00:00.000, total: 514.4}}}}}}}
 */
-
-anagramEqualityComparer(a, b) => 
-  new String.fromCharCodes(orderBy(a.codeUnits.toList()))
-  .compareTo(new String.fromCharCodes(orderBy(b.codeUnits.toList())));
 
 linq44(){
   var anagrams = [ "from   ", " salt", " earn ", "  last   ", " near ", " form  " ]; 

@@ -311,7 +311,7 @@ linq19(){
 
   int custIndex = 0;
   var customerOrders = 
-    customers.expand((cust) {
+    customers.expand((cust){
       custIndex++;
       return cust.orders.map((o) => 
         "Customer #${custIndex} has an order with OrderID ${o.orderId}");

@@ -27,7 +27,7 @@ Numbers < 5:
 */
 
 linq2() {
-  List<Product> products = productsList(); 
+  var products = productsList(); 
   
   var soldOutProducts = products
     .where((p) => p.unitsInStock == 0);
@@ -45,7 +45,7 @@ Perth Pasties is sold out!
 */
 
 linq3(){  
-  List<Product> products = productsList(); 
+  var products = productsList(); 
   
   var expensiveInStockProducts = products
     .where((p) => p.unitsInStock > 0 && p.unitPrice > 3.00);
@@ -63,7 +63,7 @@ Aniseed Syrup is in stock and costs more than 3.00.
 */
 
 linq4(){
-  List<Customer> customers = customersList(); 
+  var customers = customersList(); 
   var waCustomers = customers
       .where((c) => c.region == "WA"); 
 
