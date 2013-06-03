@@ -8,8 +8,7 @@ Running [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/pl
 executes and displays the results of all the samples. 
 
 
-[LINQ - Restriction Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-restrictions.dart)
-----------------------------
+### [LINQ - Restriction Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-restrictions.dart)
 
   - linq1: Where - Simple 1
   - linq2: Where - Simple 2
@@ -17,8 +16,7 @@ executes and displays the results of all the samples.
   - linq4: Where - Drilldown
   - linq5: Where - Indexed
 
-[LINQ - Projection Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-projections.dart)
----------------------------
+### [LINQ - Projection Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-projections.dart)
 
   - linq6: Select - Simple 1
   - linq7: Select - Simple 2
@@ -35,8 +33,7 @@ executes and displays the results of all the samples.
   - linq18: SelectMany - Multiple from
   - linq19: SelectMany - Indexed
 
-[LINQ - Partitioning Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-partitioning.dart)
------------------------------
+### [LINQ - Partitioning Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-partitioning.dart)
 
   - linq20: Take - Simple
   - linq21: Take - Nested
@@ -47,8 +44,7 @@ executes and displays the results of all the samples.
   - linq26: SkipWhile - Simple
   - linq27: SkipWhile - Indexed
 
-[LINQ - Ordering Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-ordering.dart)
--------------------------
+### [LINQ - Ordering Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-ordering.dart)
 
   - linq28: OrderBy - Simple 1
   - linq29: OrderBy - Simple 2
@@ -63,8 +59,7 @@ executes and displays the results of all the samples.
   - linq38: ThenByDescending - Comparer
   - linq39: Reverse
 
-[LINQ - Grouping Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-grouping.dart)
--------------------------
+### [LINQ - Grouping Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-grouping.dart)
 
   - linq40: GroupBy - Simple 1
   - linq41: GroupBy - Simple 2
@@ -73,8 +68,7 @@ executes and displays the results of all the samples.
   - linq44: GroupBy - Comparer
   - linq45: GroupBy - Comparer, Mapped
 
-[LINQ - Set Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-setoperations.dart)
---------------------
+### [LINQ - Set Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-setoperations.dart)
 
   - linq46: Distinct - 1
   - linq47: Distinct - 2
@@ -85,16 +79,14 @@ executes and displays the results of all the samples.
   - linq52: Except - 1
   - linq53: Except - 2
 
-[LINQ - Conversion Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-conversionoperations.dart)
----------------------------
+### [LINQ - Conversion Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-conversionoperations.dart)
 
   - linq54: ToArray
   - linq55: ToList
   - linq56: ToDictionary
   - linq57: OfType
 
-[LINQ - Element Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-elementoperations.dart)
-------------------------
+### [LINQ - Element Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-elementoperations.dart)
 
   - linq58: First - Simple
   - linq59: First - Condition
@@ -104,14 +96,12 @@ executes and displays the results of all the samples.
   - linq63: _(missing from samples)_
   - linq64: ElementAt
 
-[LINQ - Generation Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-generationoperations.dart)
----------------------------
+### [LINQ - Generation Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-generationoperations.dart)
 
   - linq65: Range
   - linq66: Repeat
 
-[LINQ - Quantifiers](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-quantifiers.dart)
-------------------
+### [LINQ - Quantifiers](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-quantifiers.dart)
 
   - linq67: Any - Simple
   - linq68: _(missing from samples)_
@@ -120,8 +110,7 @@ executes and displays the results of all the samples.
   - linq71: _(missing from samples)_
   - linq72: All - Grouped
 
-[LINQ - Aggregate Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-aggregateoperations.dart)
---------------------------
+### [LINQ - Aggregate Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-aggregateoperations.dart)
 
   - linq73: Count - Simple
   - linq74: Count - Conditional
@@ -145,23 +134,20 @@ executes and displays the results of all the samples.
   - linq92: Aggregate - Simple
   - linq93: Aggregate - Seed
 
-[LINQ - Miscellaneous Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-miscellaneousoperations.dart)
-------------------------------
+### [LINQ - Miscellaneous Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-miscellaneousoperations.dart)
 
   - linq94: Concat - 1
   - linq95: Concat - 2
   - linq96: EqualAll - 1
   - linq97: EqualAll - 2
 
-[LINQ - Query Execution](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-queryexecution.dart)
-----------------------
+### [LINQ - Query Execution](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-queryexecution.dart)
 
   - linq99: Deferred Execution
   - linq100: Immediate Execution
   - linq101: Query Reuse
 
-[LINQ - Join Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-joinoperators.dart)
----------------------
+### [LINQ - Join Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-joinoperators.dart)
 
   - linq102: Cross Join
   - linq103: Group Join

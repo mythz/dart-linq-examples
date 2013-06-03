@@ -197,8 +197,7 @@ runSamples(String section, Map samplesMap){
 }
 
 printTOC(String section, Map samplesMap){
-  var dashes = new String.fromCharCodes(new List.filled(section.length, '-'.codeUnits[0]));
-  print("\n$section\n$dashes\n");
+  print("\n### $section\n");
   
   var lib = currentMirrorSystem().findLibrary(const Symbol('linq_samples')).first;
   samplesMap.forEach((fnName, desc){
