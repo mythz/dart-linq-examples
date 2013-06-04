@@ -19,7 +19,7 @@ ofType(List seq, type) =>
 linq54(){
   var doubles = [ 1.7, 2.3, 1.9, 4.1, 2.9 ]; 
   
-  var sortedDoubles = orderDesc(doubles);
+  var sortedDoubles = order(doubles).reversed;
 
   var doublesArray = sortedDoubles.toList(growable:false); 
   

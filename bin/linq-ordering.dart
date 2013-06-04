@@ -15,15 +15,22 @@ doOrdering() =>
      'linq38': 'ThenByDescending - Comparer',
      'linq39': 'Reverse'});
 
-order(List seq, {Comparator by}) =>
-  seq..sort(by);
+wrap(value, fn(x)) => fn(value);
 
-orderAll(List seq, {List<Comparator> by}) =>
-  seq..sort((a,b) => by
-    .firstWhere((compare) => compare(a,b) != 0, orElse:() => (x,y) => 0)(a,b));
-
-orderDesc(List seq, {Comparator by}) =>
-  seq..sort((a,b) => by != null ? by(b,a) : b.compareTo(a));
+order(List seq, {Comparator by, List<Comparator> byAll, on(x), List<Function> onAll}) =>
+  by != null ? 
+    (seq..sort(by)) 
+  : byAll != null ?
+    (seq..sort((a,b) => byAll
+      .firstWhere((compare) => compare(a,b) != 0, orElse:() => (x,y) => 0)(a,b)))
+  : on != null ? 
+    (seq..sort((a,b) => on(a).compareTo(on(b)))) 
+  : onAll != null ?
+    (seq..sort((a,b) =>
+      wrap(onAll.firstWhere((_on) => _on(a).compareTo(_on(b)) != 0, orElse:() => (x) => 0),
+        (_on) => _on(a).compareTo(_on(b)) 
+    ))) :
+    (seq..sort()); 
 
 caseInsensitiveComparer(a,b) => 
   a.toUpperCase().compareTo(b.toUpperCase());
@@ -46,7 +53,7 @@ cherry
 linq29(){
   var words = [ "cherry", "apple", "blueberry" ]; 
   
-  var sortedWords = order(words, by:(a,b) => a.length.compareTo(b.length));
+  var sortedWords = order(words, on:(a) => a.length);
   
   print("The sorted list of words (by length):"); 
   sortedWords.forEach(print);
@@ -61,7 +68,7 @@ blueberry
 linq30(){
   var products = productsList(); 
   
-  var sortedProducts = order(products, by:(a,b) => a.productName.compareTo(b.productName));
+  var sortedProducts = order(products, on:(a) => a.productName);
   
   sortedProducts.forEach(print);
 }
@@ -93,7 +100,7 @@ ClOvEr
 linq32(){
   var doubles = [ 1.7, 2.3, 1.9, 4.1, 2.9 ]; 
   
-  var sortedDoubles = orderDesc(doubles); 
+  var sortedDoubles = order(doubles).reversed; 
   
   print("The doubles from highest to lowest:");   
   sortedDoubles.forEach(print);
@@ -110,7 +117,7 @@ The doubles from highest to lowest:
 linq33(){
   var products = productsList(); 
   
-  var sortedProducts = orderDesc(products, by:(a,b) => a.unitsInStock.compareTo(b.unitsInStock)); 
+  var sortedProducts = order(products, on:(a) => a.unitsInStock).reversed; 
   
   sortedProducts.forEach(print);
 }
@@ -126,7 +133,7 @@ linq33(){
 linq34(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
-  var sortedWords = orderDesc(words, by:caseInsensitiveComparer);
+  var sortedWords = order(words, by:caseInsensitiveComparer).reversed;
   
   sortedWords.forEach(print);
 }
@@ -142,7 +149,7 @@ AbAcUs
 linq35(){
   var digits = [ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" ]; 
   
-  var sortedDigits = orderAll(digits, by:[(a,b) => a.length.compareTo(b.length), (a,b) => a.compareTo(b)]);
+  var sortedDigits = order(digits, onAll:[(a) => a.length, (a) => a]);
   
   print("Sorted digits:"); 
   sortedDigits.forEach(print);
@@ -164,7 +171,7 @@ three
 linq36(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
-  var sortedWords = orderAll(words, by:[(a,b) => a.length.compareTo(b.length), caseInsensitiveComparer]);
+  var sortedWords = order(words, byAll:[(a,b) => a.length.compareTo(b.length), caseInsensitiveComparer]);
   
   sortedWords.forEach(print);
 }
@@ -180,8 +187,7 @@ BlUeBeRrY
 linq37(){
   var products = productsList(); 
 
-  var sortedProducts = orderAll(products,
-    by:[(a,b) => a.category.compareTo(b.category), (a,b) => b.unitPrice.compareTo(a.unitPrice)]);
+  var sortedProducts = order(products, onAll:[(a) => a.category, (a) => a.unitPrice * -1]);
   
   sortedProducts.forEach(print);
 }
@@ -201,8 +207,8 @@ linq37(){
 linq38(){
   var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
   
-  var sortedWords = orderAll(words, 
-    by:[(a,b) => a.length.compareTo(b.length), (a,b) => caseInsensitiveComparer(b,a)]); 
+  var sortedWords = order(words, 
+    byAll:[(a,b) => a.length.compareTo(b.length), (a,b) => caseInsensitiveComparer(b,a)]); 
 
   sortedWords.forEach(print);
 }
