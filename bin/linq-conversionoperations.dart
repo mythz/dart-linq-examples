@@ -7,7 +7,7 @@ doConversionOperations() =>
      'linq56': 'ToDictionary',
      'linq57': 'OfType'});
 
-toMap(List seq, f(x)) {
+toMap(List seq, f(x)){
   var map = {};
   seq.forEach((x) => map[f(x)] = x);
   return map;

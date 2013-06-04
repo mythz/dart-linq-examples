@@ -26,7 +26,7 @@ Numbers < 5:
 0
 */
 
-linq2() {
+linq2(){
   var products = productsList(); 
   
   var soldOutProducts = products
@@ -68,7 +68,7 @@ linq4(){
       .where((c) => c.region == "WA"); 
 
   print("Customers from Washington and their orders:");
-  waCustomers.forEach((Customer c) {
+  waCustomers.forEach((Customer c){
     print("Customer ${c.customerId}: ${c.companyName}");
     c.orders.forEach((o) => print("  Order ${o.orderId}: ${o.orderDate}"));
   });
@@ -85,7 +85,7 @@ Customer TRAIH: Trail's Head Gourmet Provisioners
 ...
 */
 
-linq5() { 
+linq5(){ 
   var digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]; 
   
   int index=0;

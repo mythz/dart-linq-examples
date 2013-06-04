@@ -231,7 +231,7 @@ public void Linq2()
 ```
 ```dart
 //dart
-linq2() {
+linq2(){
   var products = productsList(); 
   
   var soldOutProducts = products
@@ -321,7 +321,7 @@ linq4(){
       .where((c) => c.region == "WA"); 
 
   print("Customers from Washington and their orders:");
-  waCustomers.forEach((Customer c) {
+  waCustomers.forEach((Customer c){
     print("Customer ${c.customerId}: ${c.companyName}");
     c.orders.forEach((o) => print("  Order ${o.orderId}: ${o.orderDate}"));
   });
@@ -357,7 +357,7 @@ public void Linq5()
 ```
 ```dart
 //dart
-linq5() { 
+linq5(){ 
   var digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]; 
   
   int index=0;
@@ -1342,8 +1342,8 @@ order(List seq, {Comparator by, List<Comparator> byAll, on(x), List<Function> on
     (seq..sort((a,b) =>
       wrap(onAll.firstWhere((_on) => _on(a).compareTo(_on(b)) != 0, orElse:() => (x) => 0),
         (_on) => _on(a).compareTo(_on(b)) 
-    ))) :
-    (seq..sort()); 
+    ))) 
+  : (seq..sort()); 
 
 caseInsensitiveComparer(a,b) => 
   a.toUpperCase().compareTo(b.toUpperCase());
@@ -1613,12 +1613,13 @@ public void Linq35()
 ```
 ```dart
 //dart
-linq34(){
-  var words = [ "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" ]; 
+linq35(){
+  var digits = [ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" ]; 
   
-  var sortedWords = order(words, by:caseInsensitiveComparer).reversed;
+  var sortedDigits = order(digits, onAll:[(a) => a.length, (a) => a]);
   
-  sortedWords.forEach(print);
+  print("Sorted digits:"); 
+  sortedDigits.forEach(print);
 }
 ```
 #### Output
@@ -2473,7 +2474,7 @@ LINQ - Conversion Operators
 ### Dart utils added
 
 ```dart
-toMap(List seq, f(x)) {
+toMap(List seq, f(x)){
   var map = {};
   seq.forEach((x) => map[f(x)] = x);
   return map;
@@ -3326,7 +3327,7 @@ linq84(){
   var products = productsList(); 
   
   var categories = group(products, by:(p) => p.category)
-    .map((g) {
+    .map((g){
       var minPrice = min(g.values.map((p) => p.unitPrice));
       return { 'Category': g.key, 'CheapestProducts': g.values.where((p) => p.unitPrice == minPrice) };
     });

@@ -29,8 +29,8 @@ order(List seq, {Comparator by, List<Comparator> byAll, on(x), List<Function> on
     (seq..sort((a,b) =>
       wrap(onAll.firstWhere((_on) => _on(a).compareTo(_on(b)) != 0, orElse:() => (x) => 0),
         (_on) => _on(a).compareTo(_on(b)) 
-    ))) :
-    (seq..sort()); 
+    ))) 
+  : (seq..sort()); 
 
 caseInsensitiveComparer(a,b) => 
   a.toUpperCase().compareTo(b.toUpperCase());
