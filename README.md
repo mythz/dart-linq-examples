@@ -3,7 +3,7 @@
 
 Port of the [C# 101 LINQ Samples](http://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b) rewritten into idiomatic Dart and utilizing its functional collection mixins.
 
-Running [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/play.dart) executes and displays the results of all samples.
+Running [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/play.dart) executes and displays the results of all samples. You can also compare these [LINQ examples in Clojure](https://github.com/mythz/clojure-linq-examples).
 
 The samples below mirrors the C# LINQ samples layout with the names of the top-level Dart methods matching their corresponding C# examples.
 
