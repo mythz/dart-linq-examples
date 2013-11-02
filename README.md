@@ -7,152 +7,20 @@ Running [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/pl
 
 The samples below mirrors the C# LINQ samples layout with the names of the top-level Dart methods matching their corresponding C# examples.
 
-### [LINQ - Restriction Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-restrictions.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Restriction-Operators-b15d29ca)
-
-  - linq1: Where - Simple 1
-  - linq2: Where - Simple 2
-  - linq3: Where - Simple 3
-  - linq4: Where - Drilldown
-  - linq5: Where - Indexed
-
-### [LINQ - Projection Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-projections.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-to-DataSets-09787825)
-
-  - linq6: Select - Simple 1
-  - linq7: Select - Simple 2
-  - linq8: Select - Transformation
-  - linq9: Select - Anonymous Types 1
-  - linq10: Select - Anonymous Types 2
-  - linq11: Select - Anonymous Types 3
-  - linq12: Select - Indexed
-  - linq13: Select - Filtered
-  - linq14: SelectMany - Compound from 1
-  - linq15: SelectMany - Compound from 2
-  - linq16: SelectMany - Compound from 3
-  - linq17: SelectMany - from Assignment
-  - linq18: SelectMany - Multiple from
-  - linq19: SelectMany - Indexed
-
-### [LINQ - Partitioning Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-partitioning.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Partitioning-Operators-c68aaccc)
-
-  - linq20: Take - Simple
-  - linq21: Take - Nested
-  - linq22: Skip - Simple
-  - linq23: Skip - Nested
-  - linq24: TakeWhile - Simple
-  - linq25: TakeWhile - Indexed
-  - linq26: SkipWhile - Simple
-  - linq27: SkipWhile - Indexed
-
-### [LINQ - Ordering Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-ordering.dart) / [MSDN C#](http://code.msdn.microsoft.com/SQL-Ordering-Operators-050af19e)
-
-  - linq28: OrderBy - Simple 1
-  - linq29: OrderBy - Simple 2
-  - linq30: OrderBy - Simple 3
-  - linq31: OrderBy - Comparer
-  - linq32: OrderByDescending - Simple 1
-  - linq33: OrderByDescending - Simple 2
-  - linq34: OrderByDescending - Comparer
-  - linq35: ThenBy - Simple
-  - linq36: ThenBy - Comparer
-  - linq37: ThenByDescending - Simple
-  - linq38: ThenByDescending - Comparer
-  - linq39: Reverse
-
-### [LINQ - Grouping Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-grouping.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-to-DataSets-Grouping-c62703ea)
-
-  - linq40: GroupBy - Simple 1
-  - linq41: GroupBy - Simple 2
-  - linq42: GroupBy - Simple 3
-  - linq43: GroupBy - Nested
-  - linq44: GroupBy - Comparer
-  - linq45: GroupBy - Comparer, Mapped
-
-### [LINQ - Set Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-setoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Set-Operators-374f34fe)
-
-  - linq46: Distinct - 1
-  - linq47: Distinct - 2
-  - linq48: Union - 1
-  - linq49: Union - 2
-  - linq50: Intersect - 1
-  - linq51: Intersect - 2
-  - linq52: Except - 1
-  - linq53: Except - 2
-
-### [LINQ - Conversion Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-conversionoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Conversion-Operators-e4e59714)
-
-  - linq54: ToArray
-  - linq55: ToList
-  - linq56: ToDictionary
-  - linq57: OfType
-
-### [LINQ - Element Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-elementoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Element-Operators-0f3f12ce)
-
-  - linq58: First - Simple
-  - linq59: First - Condition
-  - linq60: _(missing from samples)_
-  - linq61: FirstOrDefault - Simple
-  - linq62: FirstOrDefault - Condition
-  - linq63: _(missing from samples)_
-  - linq64: ElementAt
-
-### [LINQ - Generation Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-generationoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Generation-Operators-8a3fbff7)
-
-  - linq65: Range
-  - linq66: Repeat
-
-### [LINQ - Quantifiers](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-quantifiers.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Quantifiers-f00e7e3e)
-
-  - linq67: Any - Simple
-  - linq68: _(missing from samples)_
-  - linq69: Any - Grouped
-  - linq70: All - Simple
-  - linq71: _(missing from samples)_
-  - linq72: All - Grouped
-
-### [LINQ - Aggregate Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-aggregateoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Aggregate-Operators-c51b3869)
-
-  - linq73: Count - Simple
-  - linq74: Count - Conditional
-  - linq75: _(missing from samples)_
-  - linq76: Count - Nested
-  - linq77: Count - Grouped
-  - linq78: Sum - Simple
-  - linq79: Sum - Projection
-  - linq80: Sum - Grouped
-  - linq81: Min - Simple
-  - linq82: Min - Projection
-  - linq83: Min - Grouped
-  - linq84: Min - Elements
-  - linq85: Max - Simple
-  - linq86: Max - Projection
-  - linq87: Max - Grouped
-  - linq88: Max - Elements
-  - linq89: Average - Simple
-  - linq90: Average - Projection
-  - linq91: Average - Grouped
-  - linq92: Aggregate - Simple
-  - linq93: Aggregate - Seed
-
-### [LINQ - Miscellaneous Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-miscellaneousoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Miscellaneous-6b72bb2a)
-
-  - linq94: Concat - 1
-  - linq95: Concat - 2
-  - linq96: EqualAll - 1
-  - linq97: EqualAll - 2
-
-### [LINQ - Query Execution](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-queryexecution.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Query-Execution-ce0d3b95)
-
-  - linq99: Deferred Execution
-  - linq100: Immediate Execution
-  - linq101: Query Reuse
-
-### [LINQ - Join Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-joinoperators.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Join-Operators-dabef4e9)
-
-  - linq102: Cross Join
-  - linq103: Group Join
-  - linq104: Cross Join with Group Join
-  - linq105: Left Outer Join
-
+#### [LINQ - Restriction Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-restrictions.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Restriction-Operators-b15d29ca)
+#### [LINQ - Projection Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-projections.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-to-DataSets-09787825)
+#### [LINQ - Partitioning Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-partitioning.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Partitioning-Operators-c68aaccc)
+#### [LINQ - Ordering Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-ordering.dart) / [MSDN C#](http://code.msdn.microsoft.com/SQL-Ordering-Operators-050af19e)
+#### [LINQ - Grouping Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-grouping.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-to-DataSets-Grouping-c62703ea)
+#### [LINQ - Set Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-setoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Set-Operators-374f34fe)
+#### [LINQ - Conversion Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-conversionoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Conversion-Operators-e4e59714)
+#### [LINQ - Element Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-elementoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Element-Operators-0f3f12ce)
+#### [LINQ - Generation Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-generationoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Generation-Operators-8a3fbff7)
+#### [LINQ - Quantifiers](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-quantifiers.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Quantifiers-f00e7e3e)
+#### [LINQ - Aggregate Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-aggregateoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Aggregate-Operators-c51b3869)
+#### [LINQ - Miscellaneous Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-miscellaneousoperations.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Miscellaneous-6b72bb2a)
+#### [LINQ - Query Execution](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-queryexecution.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Query-Execution-ce0d3b95)
+#### [LINQ - Join Operators](https://github.com/dartist/101LinqSamples/blob/master/bin/linq-joinoperators.dart) / [MSDN C#](http://code.msdn.microsoft.com/LINQ-Join-Operators-dabef4e9)
 
 ##  Side-by-side - C# LINQ vs Dart functional collections
 
@@ -246,7 +114,7 @@ linq2(){
     Sold out products:
     Chef Anton's Gumbo Mix is sold out!
     Alice Mutton is sold out!
-    Thüringer Rostbratwurst is sold out!
+    Thï¿½ringer Rostbratwurst is sold out!
     Gorgonzola Telino is sold out!
     Perth Pasties is sold out!
 
@@ -1554,11 +1422,11 @@ linq33(){
 ```
 #### Output
 
-    {productId: 75, productName: Rhönbräu Klosterbier, category: Beverages, unitPrice: 7.75, unitsInStock: 125}
+    {productId: 75, productName: Rhï¿½nbrï¿½u Klosterbier, category: Beverages, unitPrice: 7.75, unitsInStock: 125}
     {productId: 40, productName: Boston Crab Meat, category: Seafood, unitPrice: 18.4, unitsInStock: 123}
     {productId: 6, productName: Grandma's Boysenberry Spread, category: Condiments, unitPrice: 25.0, unitsInStock: 120}
-    {productId: 55, productName: Pâté chinois, category: Meat/Poultry, unitPrice: 24.0, unitsInStock: 115}
-    {productId: 61, productName: Sirop d'érable, category: Condiments, unitPrice: 28.5, unitsInStock: 113}
+    {productId: 55, productName: Pï¿½tï¿½ chinois, category: Meat/Poultry, unitPrice: 24.0, unitsInStock: 115}
+    {productId: 61, productName: Sirop d'ï¿½rable, category: Condiments, unitPrice: 28.5, unitsInStock: 113}
     ...
 
 ### linq34: OrderByDescending - Comparer
@@ -1696,10 +1564,10 @@ linq37(){
 ```
 #### Output
 
-    {productId: 38, productName: Côte de Blaye, category: Beverages, unitPrice: 263.5, unitsInStock: 17}
+    {productId: 38, productName: Cï¿½te de Blaye, category: Beverages, unitPrice: 263.5, unitsInStock: 17}
     {productId: 43, productName: Ipoh Coffee, category: Beverages, unitPrice: 46.0, unitsInStock: 17}
     {productId: 2, productName: Chang, category: Beverages, unitPrice: 19.0, unitsInStock: 17}
-    {productId: 76, productName: Lakkalikööri, category: Beverages, unitPrice: 18.0, unitsInStock: 57}
+    {productId: 76, productName: Lakkalikï¿½ï¿½ri, category: Beverages, unitPrice: 18.0, unitsInStock: 57}
     {productId: 39, productName: Chartreuse verte, category: Beverages, unitPrice: 18.0, unitsInStock: 69}
     {productId: 1, productName: Chai, category: Beverages, unitPrice: 18.0, unitsInStock: 39}
     {productId: 35, productName: Steeleye Stout, category: Beverages, unitPrice: 18.0, unitsInStock: 20}
@@ -1969,7 +1837,7 @@ linq42(){
 #### Output
 
     {Category: Dairy Products, Products: {{productId: 11, productName: Queso Cabrales, category: Dairy Products, unitPrice: 21.0, unitsInStock: 22}, {productId: 12, productName: Queso Manchego La Pastora, category: Dairy Products, unitPrice: 38.0, unitsInStock: 86}, {productId: 31, productName: Gorgonzola Telino, category: Dairy Products, unitPrice: 12.5, unitsInStock: 0}, {productId: 32, productName: Mascarpone Fabioli, category: Dairy Products, unitPrice: 32.0, unitsInStock: 9}, {productId: 33, productName: Geitost, category: Dairy Products, unitPrice: 2.5, unitsInStock: 112}, {productId: 59, productName: Raclette Courdavault, category: Dairy Products, unitPrice: 55.0, unitsInStock: 79}, {productId: 60, productName: Camembert Pierrot, category: Dairy Products, unitPrice: 34.0, unitsInStock: 19}, {productId: 69, productName: Gudbrandsdalsost, category: Dairy Products, unitPrice: 36.0, unitsInStock: 26}, {productId: 71, productName: Flotemysost, category: Dairy Products, unitPrice: 21.5, unitsInStock: 26}, {productId: 72, productName: Mozzarella di Giovanni, category: Dairy Products, unitPrice: 34.8, unitsInStock: 14}}}
-    {Category: Grains/Cereals, Products: {{productId: 22, productName: Gustaf's Knäckebröd, category: Grains/Cereals, unitPrice: 21.0, unitsInStock: 104}, {productId: 23, productName: Tunnbröd, category: Grains/Cereals, unitPrice: 9.0, unitsInStock: 61}, {productId: 42, productName: Singaporean Hokkien Fried Mee, category: Grains/Cereals, unitPrice: 14.0, unitsInStock: 26}, {productId: 52, productName: Filo Mix, category: Grains/Cereals, unitPrice: 7.0, unitsInStock: 38}, {productId: 56, productName: Gnocchi di nonna Alice, category: Grains/Cereals, unitPrice: 38.0, unitsInStock: 21}, {productId: 57, productName: Ravioli Angelo, category: Grains/Cereals, unitPrice: 19.5, unitsInStock: 36}, {productId: 64, productName: Wimmers gute Semmelknödel, category: Grains/Cereals, unitPrice: 33.25, unitsInStock: 22}}}
+    {Category: Grains/Cereals, Products: {{productId: 22, productName: Gustaf's Knï¿½ckebrï¿½d, category: Grains/Cereals, unitPrice: 21.0, unitsInStock: 104}, {productId: 23, productName: Tunnbrï¿½d, category: Grains/Cereals, unitPrice: 9.0, unitsInStock: 61}, {productId: 42, productName: Singaporean Hokkien Fried Mee, category: Grains/Cereals, unitPrice: 14.0, unitsInStock: 26}, {productId: 52, productName: Filo Mix, category: Grains/Cereals, unitPrice: 7.0, unitsInStock: 38}, {productId: 56, productName: Gnocchi di nonna Alice, category: Grains/Cereals, unitPrice: 38.0, unitsInStock: 21}, {productId: 57, productName: Ravioli Angelo, category: Grains/Cereals, unitPrice: 19.5, unitsInStock: 36}, {productId: 64, productName: Wimmers gute Semmelknï¿½del, category: Grains/Cereals, unitPrice: 33.25, unitsInStock: 22}}}
 
 ### linq43: GroupBy - Nested
 ```csharp
@@ -2921,7 +2789,7 @@ linq69(){
 ```
 #### Output
 
-    {Category: Condiments, Products: {{productId: 3, productName: Aniseed Syrup, category: Condiments, unitPrice: 10.0, unitsInStock: 13}, {productId: 4, productName: Chef Anton's Cajun Seasoning, category: Condiments, unitPrice: 22.0, unitsInStock: 53}, {productId: 5, productName: Chef Anton's Gumbo Mix, category: Condiments, unitPrice: 21.35, unitsInStock: 0}, {productId: 6, productName: Grandma's Boysenberry Spread, category: Condiments, unitPrice: 25.0, unitsInStock: 120}, {productId: 8, productName: Northwoods Cranberry Sauce, category: Condiments, unitPrice: 40.0, unitsInStock: 6}, {productId: 15, productName: Genen Shouyu, category: Condiments, unitPrice: 15.5, unitsInStock: 39}, {productId: 44, productName: Gula Malacca, category: Condiments, unitPrice: 19.45, unitsInStock: 27}, {productId: 61, productName: Sirop d'érable, category: Condiments, unitPrice: 28.5, unitsInStock: 113}, {productId: 63, productName: Vegie-spread, category: Condiments, unitPrice: 43.9, unitsInStock: 24}, {productId: 65, productName: Louisiana Fiery Hot Pepper Sauce, category: Condiments, unitPrice: 21.05, unitsInStock: 76}, {productId: 66, productName: Louisiana Hot Spiced Okra, category: Condiments, unitPrice: 17.0, unitsInStock: 4}, {productId: 77, productName: Original Frankfurter grüne Soße, category: Condiments, unitPrice: 13.0, unitsInStock: 32}}}
+    {Category: Condiments, Products: {{productId: 3, productName: Aniseed Syrup, category: Condiments, unitPrice: 10.0, unitsInStock: 13}, {productId: 4, productName: Chef Anton's Cajun Seasoning, category: Condiments, unitPrice: 22.0, unitsInStock: 53}, {productId: 5, productName: Chef Anton's Gumbo Mix, category: Condiments, unitPrice: 21.35, unitsInStock: 0}, {productId: 6, productName: Grandma's Boysenberry Spread, category: Condiments, unitPrice: 25.0, unitsInStock: 120}, {productId: 8, productName: Northwoods Cranberry Sauce, category: Condiments, unitPrice: 40.0, unitsInStock: 6}, {productId: 15, productName: Genen Shouyu, category: Condiments, unitPrice: 15.5, unitsInStock: 39}, {productId: 44, productName: Gula Malacca, category: Condiments, unitPrice: 19.45, unitsInStock: 27}, {productId: 61, productName: Sirop d'ï¿½rable, category: Condiments, unitPrice: 28.5, unitsInStock: 113}, {productId: 63, productName: Vegie-spread, category: Condiments, unitPrice: 43.9, unitsInStock: 24}, {productId: 65, productName: Louisiana Fiery Hot Pepper Sauce, category: Condiments, unitPrice: 21.05, unitsInStock: 76}, {productId: 66, productName: Louisiana Hot Spiced Okra, category: Condiments, unitPrice: 17.0, unitsInStock: 4}, {productId: 77, productName: Original Frankfurter grï¿½ne Soï¿½e, category: Condiments, unitPrice: 13.0, unitsInStock: 32}}}
     ...
 
 ### linq70: All - Simple
@@ -2980,7 +2848,7 @@ linq72(){
 ```
 #### Output
 
-    {Category: Grains/Cereals, Products: {{productId: 22, productName: Gustaf's Knäckebröd, category: Grains/Cereals, unitPrice: 21.0, unitsInStock: 104}, {productId: 23, productName: Tunnbröd, category: Grains/Cereals, unitPrice: 9.0, unitsInStock: 61}, {productId: 42, productName: Singaporean Hokkien Fried Mee, category: Grains/Cereals, unitPrice: 14.0, unitsInStock: 26}, {productId: 52, productName: Filo Mix, category: Grains/Cereals, unitPrice: 7.0, unitsInStock: 38}, {productId: 56, productName: Gnocchi di nonna Alice, category: Grains/Cereals, unitPrice: 38.0, unitsInStock: 21}, {productId: 57, productName: Ravioli Angelo, category: Grains/Cereals, unitPrice: 19.5, unitsInStock: 36}, {productId: 64, productName: Wimmers gute Semmelknödel, category: Grains/Cereals, unitPrice: 33.25, unitsInStock: 22}}}
+    {Category: Grains/Cereals, Products: {{productId: 22, productName: Gustaf's Knï¿½ckebrï¿½d, category: Grains/Cereals, unitPrice: 21.0, unitsInStock: 104}, {productId: 23, productName: Tunnbrï¿½d, category: Grains/Cereals, unitPrice: 9.0, unitsInStock: 61}, {productId: 42, productName: Singaporean Hokkien Fried Mee, category: Grains/Cereals, unitPrice: 14.0, unitsInStock: 26}, {productId: 52, productName: Filo Mix, category: Grains/Cereals, unitPrice: 7.0, unitsInStock: 38}, {productId: 56, productName: Gnocchi di nonna Alice, category: Grains/Cereals, unitPrice: 38.0, unitsInStock: 21}, {productId: 57, productName: Ravioli Angelo, category: Grains/Cereals, unitPrice: 19.5, unitsInStock: 36}, {productId: 64, productName: Wimmers gute Semmelknï¿½del, category: Grains/Cereals, unitPrice: 33.25, unitsInStock: 22}}}
     ...
 
 
@@ -3342,9 +3210,9 @@ linq84(){
     {Category: Confections, CheapestProducts: {{productId: 19, productName: Teatime Chocolate Biscuits, category: Confections, unitPrice: 9.2, unitsInStock: 25}}}
     {Category: Seafood, CheapestProducts: {{productId: 13, productName: Konbu, category: Seafood, unitPrice: 6.0, unitsInStock: 24}}}
     {Category: Condiments, CheapestProducts: {{productId: 3, productName: Aniseed Syrup, category: Condiments, unitPrice: 10.0, unitsInStock: 13}}}
-    {Category: Meat/Poultry, CheapestProducts: {{productId: 54, productName: Tourtière, category: Meat/Poultry, unitPrice: 7.45, unitsInStock: 21}}}
+    {Category: Meat/Poultry, CheapestProducts: {{productId: 54, productName: Tourtiï¿½re, category: Meat/Poultry, unitPrice: 7.45, unitsInStock: 21}}}
     {Category: Produce, CheapestProducts: {{productId: 74, productName: Longlife Tofu, category: Produce, unitPrice: 10.0, unitsInStock: 4}}}
-    {Category: Beverages, CheapestProducts: {{productId: 24, productName: Guaraná Fantástica, category: Beverages, unitPrice: 4.5, unitsInStock: 20}}}
+    {Category: Beverages, CheapestProducts: {{productId: 24, productName: Guaranï¿½ Fantï¿½stica, category: Beverages, unitPrice: 4.5, unitsInStock: 20}}}
 
 ### linq85: Max - Simple
 ```csharp
@@ -3472,9 +3340,9 @@ linq88(){
     {Category: Confections, MostExpensiveProducts: {{productId: 20, productName: Sir Rodney's Marmalade, category: Confections, unitPrice: 81.0, unitsInStock: 40}}}
     {Category: Seafood, MostExpensiveProducts: {{productId: 18, productName: Carnarvon Tigers, category: Seafood, unitPrice: 62.5, unitsInStock: 42}}}
     {Category: Condiments, MostExpensiveProducts: {{productId: 63, productName: Vegie-spread, category: Condiments, unitPrice: 43.9, unitsInStock: 24}}}
-    {Category: Meat/Poultry, MostExpensiveProducts: {{productId: 29, productName: Thüringer Rostbratwurst, category: Meat/Poultry, unitPrice: 123.79, unitsInStock: 0}}}
+    {Category: Meat/Poultry, MostExpensiveProducts: {{productId: 29, productName: Thï¿½ringer Rostbratwurst, category: Meat/Poultry, unitPrice: 123.79, unitsInStock: 0}}}
     {Category: Produce, MostExpensiveProducts: {{productId: 51, productName: Manjimup Dried Apples, category: Produce, unitPrice: 53.0, unitsInStock: 20}}}
-    {Category: Beverages, MostExpensiveProducts: {{productId: 38, productName: Côte de Blaye, category: Beverages, unitPrice: 263.5, unitsInStock: 17}}}
+    {Category: Beverages, MostExpensiveProducts: {{productId: 38, productName: Cï¿½te de Blaye, category: Beverages, unitPrice: 263.5, unitsInStock: 17}}}
 
 ### linq89: Average - Simple
 ```csharp
@@ -3732,9 +3600,9 @@ linq95(){
     Customer and product names:
     Alfreds Futterkiste
     Ana Trujillo Emparedados y helados
-    Antonio Moreno Taquería
+    Antonio Moreno Taquerï¿½a
     Around the Horn
-    Berglunds snabbköp
+    Berglunds snabbkï¿½p
     Blauer See Delikatessen
     ...
 
@@ -4024,10 +3892,10 @@ linq102(){
 
     {Category: Beverages, ProductName: Chai}
     {Category: Beverages, ProductName: Chang}
-    {Category: Beverages, ProductName: Guaraná Fantástica}
+    {Category: Beverages, ProductName: Guaranï¿½ Fantï¿½stica}
     {Category: Beverages, ProductName: Sasquatch Ale}
     {Category: Beverages, ProductName: Steeleye Stout}
-    {Category: Beverages, ProductName: Côte de Blaye}
+    {Category: Beverages, ProductName: Cï¿½te de Blaye}
     {Category: Beverages, ProductName: Chartreuse verte}
     {Category: Beverages, ProductName: Ipoh Coffee}
     ...
@@ -4098,11 +3966,11 @@ linq103(){
        Northwoods Cranberry Sauce
        Genen Shouyu
        Gula Malacca
-       Sirop d'érable
+       Sirop d'ï¿½rable
        Vegie-spread
        Louisiana Fiery Hot Pepper Sauce
        Louisiana Hot Spiced Okra
-       Original Frankfurter grüne Soße
+       Original Frankfurter grï¿½ne Soï¿½e
     ...
 
 ### linq104: Cross Join with Group Join
@@ -4212,16 +4080,16 @@ linq105(){
 
     Chai: Beverages
     Chang: Beverages
-    Guaraná Fantástica: Beverages
+    Guaranï¿½ Fantï¿½stica: Beverages
     Sasquatch Ale: Beverages
     Steeleye Stout: Beverages
-    Côte de Blaye: Beverages
+    Cï¿½te de Blaye: Beverages
     Chartreuse verte: Beverages
     Ipoh Coffee: Beverages
     Laughing Lumberjack Lager: Beverages
     Outback Lager: Beverages
-    Rhönbräu Klosterbier: Beverages
-    Lakkalikööri: Beverages
+    Rhï¿½nbrï¿½u Klosterbier: Beverages
+    Lakkalikï¿½ï¿½ri: Beverages
     Aniseed Syrup: Condiments
     Chef Anton's Cajun Seasoning: Condiments
     Chef Anton's Gumbo Mix: Condiments
@@ -4229,11 +4097,11 @@ linq105(){
     Northwoods Cranberry Sauce: Condiments
     Genen Shouyu: Condiments
     Gula Malacca: Condiments
-    Sirop d'érable: Condiments
+    Sirop d'ï¿½rable: Condiments
     Vegie-spread: Condiments
     Louisiana Fiery Hot Pepper Sauce: Condiments
     Louisiana Hot Spiced Okra: Condiments
-    Original Frankfurter grüne Soße: Condiments
+    Original Frankfurter grï¿½ne Soï¿½e: Condiments
     (No products): Vegetables
     ...
 
