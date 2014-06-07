@@ -1804,7 +1804,7 @@ linq41(){
     print("Words that start with the letter '${g['FirstLetter']}':"); 
     g['Words'].forEach(print);
   });
-}```
+}
 ```
 #### Output
 
