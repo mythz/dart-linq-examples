@@ -1794,19 +1794,30 @@ public void Linq41()
 }
 ```
 ```dart
-//dart
-Words that start with the letter 'c':
-chimpanzee
-cheese
-Words that start with the letter 'a':
-abacus
-apple
-Words that start with the letter 'b':
-blueberry
-banana
+linq41(){
+  var words = [ "blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese" ]; 
+  
+  var wordGroups = group(words, by:(w) => w[0])
+    .map((g) => { 'FirstLetter': g.key, 'Words': g }); 
+      
+  wordGroups.forEach((g){
+    print("Words that start with the letter '${g['FirstLetter']}':"); 
+    g['Words'].forEach(print);
+  });
+}```
 ```
 #### Output
 
+    //dart
+    Words that start with the letter 'c':
+    chimpanzee
+    cheese
+    Words that start with the letter 'a':
+    abacus
+    apple
+    Words that start with the letter 'b':
+    blueberry
+    banana
 
 ### linq42: GroupBy - Simple 3
 ```csharp
