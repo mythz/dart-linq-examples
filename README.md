@@ -3,7 +3,18 @@
 
 Port of the [C# 101 LINQ Samples](http://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b) rewritten into idiomatic Dart and utilizing its functional collection mixins.
 
-Running [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/play.dart) executes and displays the results of all samples. You can also compare these [LINQ examples in Clojure](https://github.com/mythz/clojure-linq-examples).
+Compare Dart to other LINQ examples written in:
+
+ - [Swift](https://github.com/mythz/swift-linq-examples)
+ - [Clojure](https://github.com/mythz/clojure-linq-examples)
+
+### Running the examples
+
+You can choose to run specific examples by commenting the sections you're not interested in [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/play.dart). 
+
+To see the full output of all the examples, run [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/play.dart) locally.
+
+### Contents
 
 The samples below mirrors the C# LINQ samples layout with the names of the top-level Dart methods matching their corresponding C# examples.
 
@@ -30,9 +41,6 @@ For a side-by-side comparison, the original **C#** source code is displayed abov
   - Outputs ending with `...` illustrates only a partial response is displayed. 
   - The source-code for C# and Dart utils used are included once under the first section they're used in.
   - The C# ObjectDumper util used is downloadable from MSDN - [ObjectDumper.zip](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba/file/46086/1/ObjectDumper.zip)
-
-You can see the full output of all the samples by running [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/play.dart) locally.
-
 
 LINQ - Restriction Operators
 ----------------------------
