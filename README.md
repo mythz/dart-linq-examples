@@ -6,6 +6,7 @@ Port of the [C# 101 LINQ Samples](http://code.msdn.microsoft.com/101-LINQ-Sample
 Compare Dart to other LINQ examples written in:
 
  - [Swift](https://github.com/mythz/swift-linq-examples)
+ - [Java](https://github.com/mythz/java-linq-examples)
  - [Clojure](https://github.com/mythz/clojure-linq-examples)
 
 ### Running the examples
