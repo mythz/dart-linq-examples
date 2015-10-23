@@ -8,6 +8,7 @@ Compare Dart to other LINQ examples written in:
  - [Swift](https://github.com/mythz/swift-linq-examples)
  - [Java](https://github.com/mythz/java-linq-examples)
  - [Clojure](https://github.com/mythz/clojure-linq-examples)
+ - [Elixir](https://github.com/omnibs/elixir-linq-examples)
 
 ### Running the examples
 
