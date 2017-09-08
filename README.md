@@ -10,7 +10,7 @@ Compare Dart to other LINQ examples written in:
  - [Kotlin](https://github.com/mythz/kotlin-linq-examples)
  - [Clojure](https://github.com/mythz/clojure-linq-examples)
  - [Elixir](https://github.com/omnibs/elixir-linq-examples)
- - [ServiceStack Templates](http://templates.servicestack.net/linq/restriction-operators)
+ - [Templates](http://templates.servicestack.net/linq/restriction-operators)
 
 ### Running the examples
 
