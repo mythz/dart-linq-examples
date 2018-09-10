@@ -12,6 +12,10 @@ Compare Dart to other LINQ examples written in:
  - [Elixir](https://github.com/omnibs/elixir-linq-examples)
  - [Templates](http://templates.servicestack.net/linq/restriction-operators)
 
+## [Call .NET Web Services from Dart](http://docs.servicestack.net/dart-add-servicestack-reference)
+
+If you're looking for an effortles typed API for consuming .NET Web Services in Flutter, Dart VM, AngularDart or Dart Web Apps checkout ServiceStack's [Dart Add ServiceStack Reference](http://docs.servicestack.net/dart-add-servicestack-reference).
+
 ### Running the examples
 
 You can choose to run specific examples by commenting the sections you're not interested in [play.dart](https://github.com/dartist/101LinqSamples/blob/master/bin/play.dart). 
