@@ -10,6 +10,7 @@ Compare Dart to other LINQ examples written in:
  - [Kotlin](https://github.com/mythz/kotlin-linq-examples)
  - [Clojure](https://github.com/mythz/clojure-linq-examples)
  - [Elixir](https://github.com/omnibs/elixir-linq-examples)
+ - [Python](https://github.com/rogerwcpt/python-linq-samples)
  - [Templates](http://templates.servicestack.net/linq/restriction-operators)
 
 ## [Call .NET Web Services from Dart](http://docs.servicestack.net/dart-add-servicestack-reference)
