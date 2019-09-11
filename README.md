@@ -5,12 +5,13 @@ Port of the [C# 101 LINQ Samples](http://code.msdn.microsoft.com/101-LINQ-Sample
 
 Compare Dart to other LINQ examples written in:
 
+ - [Python](https://github.com/rogerwcpt/python-linq-samples)
  - [Swift](https://github.com/mythz/swift-linq-examples)
  - [Java](https://github.com/mythz/java-linq-examples)
  - [Kotlin](https://github.com/mythz/kotlin-linq-examples)
  - [Clojure](https://github.com/mythz/clojure-linq-examples)
  - [Elixir](https://github.com/omnibs/elixir-linq-examples)
- - [Python](https://github.com/rogerwcpt/python-linq-samples)
+ - [Groovy](https://gitlab.com/svermeulen/groovy-linq-samples)
  - [#Script](https://sharpscript.net/linq/restriction-operators)
 
 ## [Call .NET Web Services from Dart](http://docs.servicestack.net/dart-add-servicestack-reference)
