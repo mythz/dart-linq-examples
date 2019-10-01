@@ -12,7 +12,8 @@ Compare Dart to other LINQ examples written in:
  - [Clojure](https://github.com/mythz/clojure-linq-examples)
  - [Elixir](https://github.com/omnibs/elixir-linq-examples)
  - [Groovy](https://gitlab.com/svermeulen/groovy-linq-samples)
- - [#Script](https://sharpscript.net/linq/restriction-operators)
+ - [#Script code](https://sharpscript.net/linq/restriction-operators?lang=code)
+ - [#Script lisp](https://sharpscript.net/linq/restriction-operators?lang=lisp)
 
 ## [Call .NET Web Services from Dart](http://docs.servicestack.net/dart-add-servicestack-reference)
 
